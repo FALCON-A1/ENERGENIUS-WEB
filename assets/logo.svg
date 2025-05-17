@@ -1,0 +1,59 @@
+<svg width="200" height="50" viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M35 10C21.19 10 10 21.19 10 35C10 48.81 21.19 60 35 60C48.81 60 60 48.81 60 35C60 21.19 48.81 10 35 10ZM35 55C23.95 55 15 46.05 15 35C15 23.95 23.95 15 35 15C46.05 15 55 23.95 55 35C55 46.05 46.05 55 35 55Z" fill="url(#paint0_linear)" transform="scale(0.5)"/>
+  <path d="M35 25C29.48 25 25 29.48 25 35C25 40.52 29.48 45 35 45C40.52 45 45 40.52 45 35C45 29.48 40.52 25 35 25ZM35 40C32.24 40 30 37.76 30 35C30 32.24 32.24 30 35 30C37.76 30 40 32.24 40 35C40 37.76 37.76 40 35 40Z" fill="url(#paint1_linear)" transform="scale(0.5)"/>
+  <path d="M35 5C18.43 5 5 18.43 5 35C5 51.57 18.43 65 35 65C51.57 65 65 51.57 65 35C65 18.43 51.57 5 35 5ZM35 60C21.19 60 10 48.81 10 35C10 21.19 21.19 10 35 10C48.81 10 60 21.19 60 35C60 48.81 48.81 60 35 60Z" fill="url(#paint2_linear)" transform="scale(0.5)"/>
+  <path d="M75 22.5L80 17.5L75 12.5" stroke="url(#paint3_linear)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="scale(0.5) translate(10, 20)"/>
+  <path d="M69 17.5H80" stroke="url(#paint4_linear)" stroke-width="2" stroke-linecap="round" transform="scale(0.5) translate(10, 20)"/>
+  <path d="M67.5 27.5L62.5 32.5L67.5 37.5" stroke="url(#paint5_linear)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="scale(0.5) translate(10, 20)"/>
+  <path d="M73.5 32.5H62.5" stroke="url(#paint6_linear)" stroke-width="2" stroke-linecap="round" transform="scale(0.5) translate(10, 20)"/>
+  <path d="M45 48.5C37.5 48.5 35 45 35 40" stroke="url(#paint7_linear)" stroke-width="2" stroke-linecap="round" transform="scale(0.5)"/>
+  <path d="M25 40C25 45 22.5 48.5 15 48.5" stroke="url(#paint8_linear)" stroke-width="2" stroke-linecap="round" transform="scale(0.5)"/>
+  <path d="M35 20C35 16 39.5 12.5 45 12.5" stroke="url(#paint9_linear)" stroke-width="2" stroke-linecap="round" transform="scale(0.5)"/>
+  <path d="M15 12.5C20.5 12.5 25 16 25 20" stroke="url(#paint10_linear)" stroke-width="2" stroke-linecap="round" transform="scale(0.5)"/>
+  <defs>
+    <linearGradient id="paint0_linear" x1="10" y1="35" x2="60" y2="35" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5E17EB"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="paint1_linear" x1="25" y1="35" x2="45" y2="35" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00D4FF"/>
+      <stop offset="1" stop-color="#33DEFF"/>
+    </linearGradient>
+    <linearGradient id="paint2_linear" x1="5" y1="35" x2="65" y2="35" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5E17EB"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="paint3_linear" x1="75" y1="15" x2="80" y2="15" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00D4FF"/>
+      <stop offset="1" stop-color="#33DEFF"/>
+    </linearGradient>
+    <linearGradient id="paint4_linear" x1="69" y1="18" x2="80" y2="18" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00D4FF"/>
+      <stop offset="1" stop-color="#33DEFF"/>
+    </linearGradient>
+    <linearGradient id="paint5_linear" x1="67.5" y1="32.5" x2="62.5" y2="32.5" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00D4FF"/>
+      <stop offset="1" stop-color="#33DEFF"/>
+    </linearGradient>
+    <linearGradient id="paint6_linear" x1="73.5" y1="33" x2="62.5" y2="33" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00D4FF"/>
+      <stop offset="1" stop-color="#33DEFF"/>
+    </linearGradient>
+    <linearGradient id="paint7_linear" x1="35" y1="44.25" x2="45" y2="44.25" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5E17EB"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="paint8_linear" x1="25" y1="44.25" x2="15" y2="44.25" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5E17EB"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="paint9_linear" x1="35" y1="16.25" x2="45" y2="16.25" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5E17EB"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="paint10_linear" x1="15" y1="16.25" x2="25" y2="16.25" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5E17EB"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+</svg> 

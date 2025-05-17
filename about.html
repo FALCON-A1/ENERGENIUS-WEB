@@ -1,0 +1,479 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Energenius</title>
+    <meta name="description" content="Learn about Energenius - our mission, history, and the team behind our innovative energy management solutions.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/about-modern.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo-container">
+                    <a href="index.html" class="logo">
+                        <img src="assets/logo.svg" alt="Energenius Logo" class="logo-img">
+                        <span>Energenius</span>
+                    </a>
+                </div>
+                <div class="nav-links" id="navLinks">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#about" class="active">About</a></li>
+                        <li><a href="index.html#download">Download</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav-actions">
+                    <button class="theme-toggle-small" id="themeToggleMobile" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+                    <button class="open-menu" id="openMenu" aria-label="Open menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+            <div class="scroll-progress"></div>
+        </div>
+        <button class="close-menu" id="closeMenu" aria-label="Close menu">
+            <i class="fas fa-times"></i>
+        </button>
+    </header>
+
+    <section class="about-hero">
+        <div id="heroParticles" class="hero-particles"></div>
+        <div class="container">
+            <div class="about-hero-content">
+                <h1>Transforming<br>Energy Management</h1>
+                <p>At Energenius, we're dedicated to creating innovative solutions that revolutionize how individuals and businesses manage their energy consumption. Our cutting-edge technology combines AI, IoT, and data analytics to provide intelligent energy optimization.</p>
+                
+                <div class="about-hero-stats">
+                    <div class="about-hero-stat">
+                        <div class="about-hero-stat-value" data-value="2020">0</div>
+                        <div class="about-hero-stat-label">Founded</div>
+                    </div>
+                    <div class="about-hero-stat">
+                        <div class="about-hero-stat-value" data-value="10000">0</div>
+                        <div class="about-hero-stat-label">Happy Customers</div>
+                    </div>
+                    <div class="about-hero-stat">
+                        <div class="about-hero-stat-value" data-value="30">0</div>
+                        <div class="about-hero-stat-label">% Average Savings</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="our-story about-section" id="story">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Our Story</span>
+                <h2>The Journey of Energenius</h2>
+                <p>How we became leaders in energy management technology</p>
+            </div>
+            
+            <div class="story-grid">
+                <div class="story-content" data-aos="fade-right" data-aos-duration="1000">
+                    <p>Energenius was founded in 2020 by a group of engineers and environmental scientists who shared a common vision: to make energy management accessible, efficient, and sustainable for everyone.</p>
+                    <p>What started as a small startup in a garage has grown into a global company serving thousands of homes and businesses around the world. Our journey has been guided by innovation, dedication, and a commitment to creating a greener future.</p>
+                    <p>Today, Energenius is at the forefront of energy management technology, combining AI, IoT, and data analytics to provide intelligent solutions that save energy, reduce costs, and minimize environmental impact.</p>
+                </div>
+                <div class="story-image" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="floating-image">
+                        <img src="assets/story-image.svg" alt="Energenius Story">
+                        <div class="story-image-elements">
+                            <div class="story-element e1">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Innovation</span>
+                            </div>
+                            <div class="story-element e2">
+                                <i class="fas fa-leaf"></i>
+                                <span>Sustainability</span>
+                            </div>
+                            <div class="story-element e3">
+                                <i class="fas fa-users"></i>
+                                <span>Community</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="timeline-section" id="timeline">
+        <div class="timeline-bg"></div>
+        <div class="container">
+            <div class="timeline-header" data-aos="fade-up">
+                <span class="section-label">Our Journey</span>
+                <h2>The Energenius Timeline</h2>
+                <p>Key milestones in our growth and innovation</p>
+            </div>
+            
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                <div class="timeline-items">
+                    <div class="timeline-item left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2020</div>
+                            <h3 class="timeline-title">Company Founded</h3>
+                            <p class="timeline-description">Energenius was founded by a team of engineers and environmental scientists with a vision to revolutionize energy management using AI and IoT technologies.</p>
+                            <div class="timeline-image">
+                                <img src="assets/images/timeline/foundation.svg" alt="Energenius Foundation">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item right">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2021</div>
+                            <h3 class="timeline-title">First Product Launch</h3>
+                            <p class="timeline-description">We launched our first energy monitoring system, which received overwhelming positive feedback from early adopters and industry experts.</p>
+                            <div class="timeline-image">
+                                <img src="assets/images/timeline/product-launch.svg" alt="Product Launch">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2022</div>
+                            <h3 class="timeline-title">AI Integration</h3>
+                            <p class="timeline-description">We introduced AI-powered optimization algorithms, significantly enhancing our system's ability to reduce energy consumption and provide actionable insights.</p>
+                            <div class="timeline-image">
+                                <img src="assets/images/timeline/ai-integration.svg" alt="AI Integration">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item right">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2023</div>
+                            <h3 class="timeline-title">Global Expansion</h3>
+                            <p class="timeline-description">Energenius expanded operations to Europe and Asia, bringing smart energy management to a global audience and establishing key partnerships.</p>
+                            <div class="timeline-image">
+                                <img src="assets/images/timeline/global-expansion.svg" alt="Global Expansion">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2024</div>
+                            <h3 class="timeline-title">The Future</h3>
+                            <p class="timeline-description">Looking ahead, we're developing next-generation energy solutions that will further revolutionize how the world approaches energy management and sustainability.</p>
+                            <div class="timeline-image">
+                                <img src="assets/images/timeline/future.svg" alt="Future Vision">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mission-vision about-section" id="mission">
+        <div class="section-divider top">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100">
+                <path fill="#f5f9ff" fill-opacity="1" d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,90.7C672,85,768,107,864,106.7C960,107,1056,85,1152,74.7C1248,64,1344,64,1392,64L1440,64L1440,100L1392,100C1344,100,1248,100,1152,100C1056,100,960,100,864,100C768,100,672,100,576,100C480,100,384,100,288,100C192,100,96,100,48,100L0,100Z"></path>
+            </svg>
+        </div>
+        
+        <div class="container">
+            <div class="mission-vision-grid">
+                <div class="mission-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mission-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>To empower individuals and organizations to take control of their energy consumption, reduce costs, and minimize environmental impact through innovative technology solutions that are accessible, intuitive, and effective.</p>
+                </div>
+                
+                <div class="vision-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="vision-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>A world where intelligent energy management is accessible to everyone, leading to significant reductions in global energy consumption, lower carbon emissions, and a more sustainable and equitable future for all communities.</p>
+                </div>
+            </div>
+            
+            <div class="values-grid" id="values">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-label">Our Values</span>
+                    <h2>What Drives Us</h2>
+                    <p>The core principles that guide our decisions and actions</p>
+                </div>
+                
+                <div class="values-list">
+                    <div class="value-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="value-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="value-content">
+                            <h3>Sustainability</h3>
+                            <p>We are committed to creating solutions that reduce environmental impact and promote a greener future for generations to come.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="value-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="value-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="value-content">
+                            <h3>Innovation</h3>
+                            <p>We continuously push the boundaries of technology to develop cutting-edge energy management solutions that create real impact.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="value-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="value-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="value-content">
+                            <h3>Accessibility</h3>
+                            <p>We believe energy management should be accessible to everyone, regardless of technical expertise or background.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="value-item" data-aos="fade-up" data-aos-delay="400">
+                        <div class="value-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="value-content">
+                            <h3>Integrity</h3>
+                            <p>We operate with honesty, transparency, and a strong commitment to data privacy and security in all that we do.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section-divider bottom">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100">
+                <path fill="#f5f9ff" fill-opacity="1" d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,90.7C672,85,768,107,864,106.7C960,107,1056,85,1152,74.7C1248,64,1344,64,1392,64L1440,64L1440,100L1392,100C1344,100,1248,100,1152,100C1056,100,960,100,864,100C768,100,672,100,576,100C480,100,384,100,288,100C192,100,96,100,48,100L0,100Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <section class="team about-section with-bg" id="team">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Our Team</span>
+                <h2>Meet the Innovators</h2>
+                <p>The passionate individuals behind Energenius</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member" data-aos="fade-up" data-aos-delay="100">
+                    <div class="member-image">
+                        <div class="responsive-image-container ratio-1-1">
+                            <img src="assets/images/team/team-member-1.jpeg" alt="Ali Mohamed" class="img-cover">
+                        </div>
+                        <div class="member-social">
+                            <a href="https://www.linkedin.com/in/ali-mohamed3/"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Ali Mohamed</h3>
+                        <p class="member-position">CEO & Founder</p>
+                        <p class="member-bio">As CEO, Ali leads with a strategic mindset, managing cross-functional projects to drive innovation, efficiency, and sustained growth</p>
+                    </div>
+                </div>
+                
+                <div class="team-member" data-aos="fade-up" data-aos-delay="200">
+                    <div class="member-image">
+                        <div class="responsive-image-container ratio-1-1">
+                            <img src="assets/images/team/team-member-2.jpeg" alt="Amr Ahmed" class="img-cover">
+                        </div>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Amr Ahmed</h3>
+                        <p class="member-position">CTO & Co-Founder</p>
+                        <p class="member-bio">An expert in AI and machine learning, Amr leads the development of our intelligent optimization algorithms.</p>
+                    </div>
+                </div>
+                
+                <div class="team-member" data-aos="fade-up" data-aos-delay="300">
+                    <div class="member-image">
+                        <div class="responsive-image-container ratio-1-1">
+                            <img src="assets/images/team/team-member-3.jpeg" alt="Osama Youssef" class="img-cover">
+                        </div>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Osama Youssef</h3>
+                        <p class="member-position">Head of Product</p>
+                        <p class="member-bio">With a background in UX design and product management, Osama ensures our solutions are user-friendly and effective.</p>
+                    </div>
+                </div>
+                
+                <div class="team-member" data-aos="fade-up" data-aos-delay="400">
+                    <div class="member-image">
+                        <div class="responsive-image-container ratio-1-1">
+                            <img src="assets/images/team/team-member-4.svg" alt="Dr. James Wilson" class="img-cover">
+                        </div>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Dr. James Wilson</h3>
+                        <p class="member-position">Chief Research Officer</p>
+                        <p class="member-bio">James leads our research efforts, constantly exploring new ways to enhance our energy management technology.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="partners about-section" id="partners">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Our Partners</span>
+                <h2>Collaborating for a Sustainable Future</h2>
+                <p>We work with leading organizations to advance energy efficiency and sustainability</p>
+            </div>
+            
+            <div class="partners-grid" data-aos="fade-up">
+                <div class="partner-logo">
+                    <img src="assets/partner-1.svg" alt="Partner Logo">
+                </div>
+                <div class="partner-logo">
+                    <img src="assets/partner-2.svg" alt="Partner Logo">
+                </div>
+                <div class="partner-logo">
+                    <img src="assets/partner-3.svg" alt="Partner Logo">
+                </div>
+                <div class="partner-logo">
+                    <img src="assets/partner-4.svg" alt="Partner Logo">
+                </div>
+                <div class="partner-logo">
+                    <img src="assets/partner-5.svg" alt="Partner Logo">
+                </div>
+                <div class="partner-logo">
+                    <img src="assets/partner-6.svg" alt="Partner Logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content" data-aos="zoom-in">
+                <h2>Ready to Transform Your Energy Management?</h2>
+                <p>Join thousands of satisfied users who are saving energy and reducing costs with Energenius.</p>
+                <div class="cta-buttons">
+                    <a href="index.html#download" class="btn btn-primary pulse-effect">Get Started</a>
+                    <a href="index.html#contact" class="btn btn-outline">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-particles" id="footerParticles">
+            <!-- Particles will be dynamically created by JS -->
+        </div>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="footer-logo">
+                        <img src="assets/logo-white.svg" alt="Energenius Logo">
+                        <span>Energenius</span>
+                    </a>
+                    <p>Smart energy management solutions for a sustainable future. Save energy, reduce costs, and help the environment.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#download">Download</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Documentation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter to receive updates and energy-saving tips.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Energenius. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <div class="icon-container">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+        </div>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/about-modern.js"></script>
+</body>
+</html> 

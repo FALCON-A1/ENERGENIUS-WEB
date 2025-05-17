@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5e17eb" />
+      <stop offset="100%" stop-color="#7c3aed" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d4ff" />
+      <stop offset="100%" stop-color="#33deff" />
+    </linearGradient>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#27f2aa" />
+      <stop offset="100%" stop-color="#53f4bc" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="60" cy="60" r="55" fill="white" stroke="url(#grad1)" stroke-width="2" />
+  
+  <!-- Brain Icon (representing AI) -->
+  <path d="M60 25 C75 25, 85 35, 85 47 C85 55, 80 60, 75 62 C80 65, 85 70, 85 75 C85 85, 75 95, 60 95 C45 95, 35 85, 35 75 C35 70, 38 65, 45 62 C40 60, 35 55, 35 47 C35 35, 45 25, 60 25 Z" 
+        fill="none" stroke="url(#grad1)" stroke-width="2" />
+  
+  <!-- Brain Connections -->
+  <path d="M45 55 C40 55, 40 65, 45 65" fill="none" stroke="url(#grad1)" stroke-width="1.5" />
+  <path d="M75 55 C80 55, 80 65, 75 65" fill="none" stroke="url(#grad1)" stroke-width="1.5" />
+  <path d="M50 40 C55 40, 55 50, 50 50" fill="none" stroke="url(#grad1)" stroke-width="1.5" />
+  <path d="M70 40 C65 40, 65 50, 70 50" fill="none" stroke="url(#grad1)" stroke-width="1.5" />
+  <path d="M50 80 C55 80, 55 70, 50 70" fill="none" stroke="url(#grad1)" stroke-width="1.5" />
+  <path d="M70 80 C65 80, 65 70, 70 70" fill="none" stroke="url(#grad1)" stroke-width="1.5" />
+  
+  <!-- Gear Icon (representing optimization) -->
+  <circle cx="60" cy="60" r="15" fill="none" stroke="url(#grad2)" stroke-width="2" />
+  
+  <!-- Gear Teeth -->
+  <path d="M60 45 L60 40" stroke="url(#grad2)" stroke-width="3" stroke-linecap="round" />
+  <path d="M60 75 L60 80" stroke="url(#grad2)" stroke-width="3" stroke-linecap="round" />
+  <path d="M45 60 L40 60" stroke="url(#grad2)" stroke-width="3" stroke-linecap="round" />
+  <path d="M75 60 L80 60" stroke="url(#grad2)" stroke-width="3" stroke-linecap="round" />
+  <path d="M50 50 L46 46" stroke="url(#grad2)" stroke-width="3" stroke-linecap="round" />
+  <path d="M70 50 L74 46" stroke="url(#grad2)" stroke-width="3" stroke-linecap="round" />
+  <path d="M50 70 L46 74" stroke="url(#grad2)" stroke-width="3" stroke-linecap="round" />
+  <path d="M70 70 L74 74" stroke="url(#grad2)" stroke-width="3" stroke-linecap="round" />
+  
+  <!-- Lightning Bolt (representing energy) -->
+  <path d="M30 25 L40 25 L35 40 L45 40 L30 65" fill="url(#grad3)" stroke="none" />
+  
+  <!-- Circles (representing optimization points) -->
+  <circle cx="90" cy="30" r="5" fill="url(#grad3)" />
+  <circle cx="90" cy="90" r="5" fill="url(#grad3)" />
+  <circle cx="30" cy="90" r="5" fill="url(#grad3)" />
+  
+  <!-- Central dot -->
+  <circle cx="60" cy="60" r="5" fill="url(#grad2)" />
+</svg> 

@@ -1,0 +1,1175 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energenius | Smart Energy Management</title>
+    <meta name="description" content="Energenius - The smart energy management solution for homes and businesses. Save energy and reduce costs with our innovative technology.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/contact-modern.css">
+    <link rel="stylesheet" href="css/contact-form.css">
+    <link rel="stylesheet" href="css/newsletter.css">
+    <link rel="stylesheet" href="css/footer-modern.css">
+    <link rel="stylesheet" href="css/success-stories.css">
+</head>
+<body>
+    <!-- Font Awesome Icon Test - Remove after confirming -->
+    <div style="position: fixed; top: 20px; right: 20px; z-index: 9999; font-size: 24px; color: red;">
+        <i class="fas fa-check-circle"></i>
+    </div>
+    
+    <!-- Standalone Dark Mode Toggle - Remove after original works -->
+    <button onclick="document.body.classList.toggle('dark-mode')" style="position: fixed; top: 60px; right: 20px; z-index: 9999; padding: 10px; background: #5e17eb; color: white; border: none; border-radius: 50%; width: 40px; height: 40px;">
+        <i class="fas fa-moon"></i>
+    </button>
+    
+    <div class="preloader" id="preloader">
+        <div class="loader"></div>
+        <div class="loader-text">Energenius</div>
+    </div>
+    
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo-container">
+                    <a href="index.html" class="logo">
+                        <img src="assets/logo.svg" alt="Energenius Logo" class="logo-img">
+                        <span>Energenius</span>
+                    </a>
+                </div>
+                <div class="nav-links" id="navLinks">
+                    <ul>
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="#features">Features <span class="nav-feature-badge">New</span></a></li>
+                        <li class="has-dropdown">
+                            <a href="about.html">About <i class="fas fa-chevron-down nav-arrow"></i></a>
+                            <div class="nav-dropdown">
+                                <a href="about.html#mission">Our Mission</a>
+                                <a href="about.html#team">Our Team</a>
+                                <a href="about.html#story">Our Story</a>
+                                <a href="about.html#values">Our Values</a>
+                            </div>
+                        </li>
+                        <li><a href="#download">Download</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li class="nav-cta"><a href="darkmode-test.html" class="btn btn-primary btn-sm">Try Demo</a></li>
+                    </ul>
+                </div>
+                <div class="nav-actions">
+                    <button class="theme-toggle-small" id="themeToggleMobile" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+                    <button class="open-menu" id="openMenu" aria-label="Open menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+            <div class="scroll-progress"></div>
+        </div>
+        <button class="close-menu" id="closeMenu" aria-label="Close menu">
+            <i class="fas fa-times"></i>
+        </button>
+    </header>
+
+    <section id="home" class="hero">
+        <!-- Animated background particles -->
+        <div class="particles-container">
+            <canvas id="heroParticles"></canvas>
+        </div>
+        
+        <!-- Enhanced parallax wrapper with more elements -->
+        <div class="parallax-wrapper">
+            <div class="parallax-element parallax-circle-1" data-speed="0.05"></div>
+            <div class="parallax-element parallax-circle-2" data-speed="-0.08"></div>
+            <div class="parallax-element parallax-circle-3" data-speed="0.03"></div>
+            <div class="parallax-element parallax-shape-1" data-speed="-0.1"></div>
+            <div class="parallax-element parallax-shape-2" data-speed="0.06"></div>
+            <div class="parallax-element parallax-shape-3" data-speed="0.02"></div>
+            <div class="parallax-element parallax-shape-4" data-speed="-0.05"></div>
+            <div class="glow-orb"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span><i class="fas fa-bolt"></i> New Technology</span>
+                </div>
+                <h1 class="animated-text">
+                    <span class="text-animate">Smart</span> 
+                    <span class="text-animate">Energy</span> 
+                    <span class="text-animate">Management</span>
+                    <br>
+                    <span class="text-animate">for a</span> 
+                    <span class="text-animate highlight">Sustainable</span> 
+                    <span class="text-animate">Future</span>
+                </h1>
+                <p class="subtitle typing-animation">Save energy, reduce costs, and protect the environment with our intelligent energy monitoring and optimization system.</p>
+                
+                <!-- Stats counter section -->
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-value"><span class="count-up" data-count="30">0</span>%</div>
+                        <div class="stat-label">Average Savings</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value"><span class="count-up" data-count="10000">0</span>+</div>
+                        <div class="stat-label">Happy Users</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value"><span class="count-up" data-count="24">0</span>/7</div>
+                        <div class="stat-label">Support</div>
+                    </div>
+                </div>
+                
+                <div class="cta-buttons">
+                    <a href="#download" class="btn btn-primary pulse-effect">
+                        <span>Get Started</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#features" class="btn btn-outline">
+                        <span>Learn More</span>
+                        <i class="fas fa-info-circle"></i>
+                    </a>
+                </div>
+                
+                <!-- Mouse scroll indicator -->
+                <div class="mouse-scroll-indicator">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+            </div>
+                    <div class="arrows">
+                        <span class="arrow-down"></span>
+                        <span class="arrow-down"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <div class="floating-element">
+                    <div class="image-container">
+                        <img src="assets/images/hero/hero-dashboard.svg" alt="Energenius Dashboard" class="img-fluid img-shadow">
+                        
+                        <!-- Interactive floating elements around the dashboard -->
+                        <div class="dashboard-elements">
+                            <div class="dashboard-element element-1">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Live Analytics</span>
+                    </div>
+                            <div class="dashboard-element element-2">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Smart Control</span>
+                </div>
+                            <div class="dashboard-element element-3">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Secure Data</span>
+            </div>
+        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Interactive wave divider with animation -->
+        <div class="wave-divider">
+            <svg class="animated-wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,128C672,128,768,160,864,160C960,160,1056,128,1152,117.3C1248,107,1344,117,1392,122.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Features</span>
+                <h2>Smart. Simple. Sustainable.</h2>
+                <p>Our comprehensive energy management solution provides everything you need to monitor, analyze, and optimize your energy consumption.</p>
+            </div>
+            
+            <!-- Feature Categories Filter -->
+            <div class="feature-categories" data-aos="fade-up" data-aos-delay="100">
+                <div class="feature-category active" data-category="all">All Features</div>
+                <div class="feature-category" data-category="monitoring">Monitoring</div>
+                <div class="feature-category" data-category="optimization">Optimization</div>
+                <div class="feature-category" data-category="control">Control</div>
+                <div class="feature-category" data-category="sustainability">Sustainability</div>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card" data-aos="zoom-in" data-aos-delay="100" data-category="monitoring">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="feature-content">
+                    <h3>Real-time Monitoring</h3>
+                    <p>Track your energy usage in real-time with detailed analytics and personalized dashboards.</p>
+                        <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="shine"></div>
+                </div>
+                
+                <div class="feature-card" data-aos="zoom-in" data-aos-delay="200" data-category="optimization">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="feature-content">
+                    <h3>Smart Optimization</h3>
+                    <p>AI-powered suggestions to help you reduce energy consumption without sacrificing comfort.</p>
+                        <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="shine"></div>
+                </div>
+                
+                <div class="feature-card" data-aos="zoom-in" data-aos-delay="300" data-category="optimization">
+                    <div class="feature-icon">
+                        <i class="fas fa-piggy-bank"></i>
+                    </div>
+                    <div class="feature-content">
+                    <h3>Cost Reduction</h3>
+                    <p>Save up to 30% on your energy bills with our intelligent optimization algorithms.</p>
+                        <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="shine"></div>
+                </div>
+                
+                <div class="feature-card" data-aos="zoom-in" data-aos-delay="400" data-category="control">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="feature-content">
+                    <h3>Mobile Control</h3>
+                    <p>Manage your energy systems from anywhere using our intuitive mobile application.</p>
+                        <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="shine"></div>
+                </div>
+                
+                <div class="feature-card" data-aos="zoom-in" data-aos-delay="500" data-category="control">
+                    <div class="feature-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="feature-content">
+                    <h3>Smart Home Integration</h3>
+                    <p>Seamlessly connects with popular smart home systems and IoT devices.</p>
+                        <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="shine"></div>
+                </div>
+                
+                <div class="feature-card" data-aos="zoom-in" data-aos-delay="600" data-category="sustainability">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="feature-content">
+                    <h3>Eco-Friendly</h3>
+                    <p>Reduce your carbon footprint and contribute to a healthier planet.</p>
+                        <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="shine"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="comparison">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Pricing Plans</span>
+                <h2>Choose Your Energy Management Plan</h2>
+                <p>Find the perfect solution for your energy management needs</p>
+            </div>
+            
+            <!-- Pricing toggle for monthly/annual billing -->
+            <div class="pricing-toggle" data-aos="fade-up" data-aos-delay="100">
+                <span class="toggle-label active" id="monthlyLabel">Monthly Billing</span>
+                <label class="switch">
+                    <input type="checkbox" id="billingToggle">
+                    <span class="slider"></span>
+                </label>
+                <span class="toggle-label" id="annualLabel">Annual Billing <span class="savings-text">Save 20%</span></span>
+            </div>
+            
+            <!-- Modern pricing cards grid -->
+            <div class="pricing-grid" data-aos="fade-up" data-aos-delay="200">
+                <!-- Basic Plan -->
+                <div class="pricing-card" id="basicPlan">
+                                <div class="plan-name">Basic</div>
+                    <div class="plan-price" data-monthly="$0" data-annual="$0">$0</div>
+                    <div class="plan-period">Free Forever</div>
+                    <div class="plan-divider"></div>
+                    
+                    <ul class="plan-features">
+                        <li class="feature-available"><i class="fas fa-check-circle"></i> Energy Monitoring</li>
+                        <li class="feature-available"><i class="fas fa-check-circle"></i> Usage Statistics</li>
+                        <li class="feature-available"><i class="fas fa-check-circle"></i> Mobile App Access</li>
+                        <li class="feature-unavailable"><i class="fas fa-times-circle"></i> Real-time Alerts</li>
+                        <li class="feature-unavailable"><i class="fas fa-times-circle"></i> Smart Device Integration</li>
+                        <li class="feature-unavailable"><i class="fas fa-times-circle"></i> AI Energy Optimization</li>
+                        <li class="feature-unavailable"><i class="fas fa-times-circle"></i> Priority Support</li>
+                    </ul>
+                    
+                    <div class="plan-cta">
+                        <a href="#download" class="btn btn-outline">Get Started</a>
+                    </div>
+                </div>
+                
+                <!-- Pro Plan (Popular) -->
+                <div class="pricing-card popular" id="proPlan">
+                    <div class="popular-badge">Most Popular</div>
+                                <div class="plan-name">Pro</div>
+                    <div class="plan-price" data-monthly="$19" data-annual="$15">$19</div>
+                    <div class="plan-period">per month</div>
+                    <div class="plan-divider"></div>
+                    
+                    <ul class="plan-features">
+                        <li class="feature-available"><i class="fas fa-check-circle"></i> Energy Monitoring</li>
+                        <li class="feature-available"><i class="fas fa-check-circle"></i> Usage Statistics</li>
+                        <li class="feature-available"><i class="fas fa-check-circle"></i> Mobile App Access</li>
+                        <li class="feature-available"><i class="fas fa-check-circle"></i> Real-time Alerts</li>
+                        <li class="feature-available"><i class="fas fa-check-circle"></i> Smart Device Integration</li>
+                        <li class="feature-available"><i class="fas fa-check-circle"></i> AI Energy Optimization</li>
+                        <li class="feature-unavailable"><i class="fas fa-times-circle"></i> Priority Support</li>
+                    </ul>
+                    
+                    <div class="plan-cta">
+                        <a href="#download" class="btn btn-primary">Get Started</a>
+                    </div>
+                </div>
+                
+                <!-- Enterprise Plan -->
+                <div class="pricing-card" id="enterprisePlan">
+                    <div class="savings-badge" id="savingsBadge">Save 20%</div>
+                                <div class="plan-name">Enterprise</div>
+                    <div class="plan-price" data-monthly="$49" data-annual="$39">$49</div>
+                    <div class="plan-period">per month</div>
+                    <div class="plan-divider"></div>
+                    
+                    <ul class="plan-features">
+                        <li class="feature-available"><i class="fas fa-check-circle"></i> Energy Monitoring</li>
+                        <li class="feature-available"><i class="fas fa-check-circle"></i> Usage Statistics</li>
+                        <li class="feature-available"><i class="fas fa-check-circle"></i> Mobile App Access</li>
+                        <li class="feature-available"><i class="fas fa-check-circle"></i> Real-time Alerts</li>
+                        <li class="feature-available"><i class="fas fa-check-circle"></i> Smart Device Integration</li>
+                        <li class="feature-available"><i class="fas fa-check-circle"></i> AI Energy Optimization</li>
+                        <li class="feature-available"><i class="fas fa-check-circle"></i> Priority Support</li>
+                    </ul>
+                    
+                    <div class="plan-cta">
+                        <a href="#contact" class="btn btn-secondary">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="shape-divider">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120">
+                <path fill-opacity="1" d="M0,60L48,66C96,72,192,84,288,80C384,76,480,56,576,56C672,56,768,76,864,78C960,80,1056,64,1152,56C1248,48,1344,48,1392,48L1440,48L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"></path>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="about-image-wrapper">
+                        <div class="floating-image-3d">
+                            <svg class="about-placeholder-svg" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="10" y="10" width="380" height="280" rx="20" fill="#f5f9ff" stroke="#5e17eb" stroke-width="2" stroke-dasharray="5,5"/>
+                                <circle cx="200" cy="120" r="60" fill="#5e17eb" opacity="0.1"/>
+                                <path d="M160 150 L240 150 L200 90 Z" fill="#5e17eb"/>
+                                <rect x="140" y="160" width="120" height="15" rx="5" fill="#5e17eb" opacity="0.7"/>
+                                <rect x="160" y="185" width="80" height="10" rx="5" fill="#5e17eb" opacity="0.5"/>
+                                <rect x="170" y="205" width="60" height="10" rx="5" fill="#5e17eb" opacity="0.3"/>
+                                <text x="200" y="250" font-family="Arial" font-size="14" text-anchor="middle" fill="#5e17eb">Energy Management Solutions</text>
+                            </svg>
+                            <div class="about-image-elements">
+                                <div class="about-element element-1">
+                                    <i class="fas fa-leaf"></i>
+                                    <span>Eco-friendly</span>
+                                </div>
+                                <div class="about-element element-2">
+                                    <i class="fas fa-bolt"></i>
+                                    <span>Energy Saving</span>
+                                </div>
+                                <div class="about-element element-3">
+                                    <i class="fas fa-cog"></i>
+                                    <span>Smart Tech</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-image-backdrop"></div>
+                        <div class="about-particles-container">
+                            <canvas id="aboutParticles"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content" data-aos="fade-left" data-aos-duration="1000">
+                    <span class="section-label">About Us</span>
+                    <h2 class="about-title">Revolutionizing Energy Management</h2>
+                    <p class="about-description">Founded in 2020, Energenius is on a mission to transform how homes and businesses manage their energy consumption.</p>
+                    <p class="about-description">Our team of experts in energy management, AI, and IoT has developed a groundbreaking solution that makes energy optimization accessible to everyone.</p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card" data-value="30">
+                            <div class="stat-card-inner">
+                                <div class="stat-front">
+                            <h3 class="counter">30<span>%</span></h3>
+                            <p>Average Energy Saving</p>
+                        </div>
+                                <div class="stat-back">
+                                    <i class="fas fa-chart-line"></i>
+                                    <p>Save up to 30% on your energy bills</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-card" data-value="10000">
+                            <div class="stat-card-inner">
+                                <div class="stat-front">
+                            <h3 class="counter">10K<span>+</span></h3>
+                            <p>Happy Users</p>
+                        </div>
+                                <div class="stat-back">
+                                    <i class="fas fa-users"></i>
+                                    <p>Trusted by thousands worldwide</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-card" data-value="24">
+                            <div class="stat-card-inner">
+                                <div class="stat-front">
+                            <h3 class="counter">24<span>/7</span></h3>
+                            <p>Monitoring</p>
+                        </div>
+                                <div class="stat-back">
+                                    <i class="fas fa-clock"></i>
+                                    <p>Continuous real-time energy tracking</p>
+                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-progress">
+                        <div class="progress-item">
+                            <div class="progress-info">
+                                <span>Energy Efficiency</span>
+                                <span class="progress-percentage">95%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-info">
+                                <span>Customer Satisfaction</span>
+                                <span class="progress-percentage">98%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 98%"></div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-info">
+                                <span>Smart Home Integration</span>
+                                <span class="progress-percentage">90%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="about.html" class="btn btn-secondary btn-about">
+                        <span>Learn More About Us</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="testimonials-bg-pattern"></div>
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Testimonials</span>
+                <h2>What Our Customers Say</h2>
+                <p>Hear from businesses and homeowners who've transformed their energy management with Energenius</p>
+            </div>
+            
+            <div class="testimonial-wrapper" data-aos="fade-up" data-aos-delay="200">
+                <div class="testimonial-container">
+                <div class="testimonial-slider" id="testimonialSlider">
+                    <div class="testimonial-slides" id="testimonialSlides">
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                    <div class="testimonial-badge">
+                                        <span>Business</span>
+                                    </div>
+                                    <div class="testimonial-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="quote-icon">
+                                        <i class="fas fa-quote-left"></i>
+                                    </div>
+                                <div class="testimonial-content">
+                                        "Energenius has completely transformed how we manage energy at our manufacturing plant. The real-time monitoring and AI-powered suggestions have helped us reduce our energy costs by <span class="highlight">32%</span> in just six months. The ROI has been remarkable."
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="testimonial-author-image">
+                                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Doe">
+                                    </div>
+                                    <div class="testimonial-author-info">
+                                        <h4>John Doe</h4>
+                                        <p>Operations Manager, TechManufacturing Inc.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                    <div class="testimonial-badge">
+                                        <span>Homeowner</span>
+                                    </div>
+                                    <div class="testimonial-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <div class="quote-icon">
+                                        <i class="fas fa-quote-left"></i>
+                                    </div>
+                                <div class="testimonial-content">
+                                        "As a homeowner, I was looking for ways to reduce my carbon footprint and save on utility bills. Energenius made it simple to understand my energy usage patterns and provided practical tips for optimization. I've seen a <span class="highlight">25%</span> reduction in my monthly bills!"
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="testimonial-author-image">
+                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson">
+                                    </div>
+                                    <div class="testimonial-author-info">
+                                        <h4>Sarah Johnson</h4>
+                                        <p>Homeowner, Boston</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                    <div class="testimonial-badge">
+                                        <span>Enterprise</span>
+                                    </div>
+                                    <div class="testimonial-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="quote-icon">
+                                        <i class="fas fa-quote-left"></i>
+                                    </div>
+                                <div class="testimonial-content">
+                                        "The integration capabilities with our existing smart building systems made Energenius an easy choice. The platform's intuitive design means everyone on our team can understand the insights without specialized training. It's been a <span class="highlight">game-changer</span> for our sustainability goals."
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="testimonial-author-image">
+                                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Michael Chen">
+                                    </div>
+                                    <div class="testimonial-author-info">
+                                        <h4>Michael Chen</h4>
+                                        <p>Sustainability Director, GreenOffice Solutions</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                    <div class="testimonial-progress">
+                        <div class="testimonial-progress-bar"></div>
+                </div>
+                
+                <div class="testimonial-controls">
+                    <button class="testimonial-control" id="prevTestimonial">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                        <div class="testimonial-dots" id="testimonialDots">
+                            <div class="testimonial-dot active" data-index="0"></div>
+                            <div class="testimonial-dot" data-index="1"></div>
+                            <div class="testimonial-dot" data-index="2"></div>
+                        </div>
+                    <button class="testimonial-control" id="nextTestimonial">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+                
+                <div class="testimonial-stats">
+                    <div class="testimonial-stat">
+                        <div class="stat-number"><span class="count-up" data-count="500">0</span>+</div>
+                        <div class="stat-label">Happy Customers</div>
+                    </div>
+                    <div class="testimonial-stat">
+                        <div class="stat-number"><span class="count-up" data-count="98">0</span>%</div>
+                        <div class="stat-label">Satisfaction Rate</div>
+                    </div>
+                    <div class="testimonial-stat">
+                        <div class="stat-number"><span class="count-up" data-count="30">0</span>%</div>
+                        <div class="stat-label">Average Savings</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="success-stories" class="success-stories" style="background-color: #0f1120;">
+        <div class="success-stories-bg"></div>
+        
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Success Stories</span>
+                <h2>Real-World Energy Transformations</h2>
+                <p>Discover how organizations and individuals have achieved significant energy savings with Energenius</p>
+            </div>
+            
+            <div class="case-study-filters" data-aos="fade-up" data-aos-delay="100">
+                <button class="filter-btn active" data-filter="all">All Stories</button>
+                <button class="filter-btn" data-filter="business">Business</button>
+                <button class="filter-btn" data-filter="residential">Residential</button>
+                <button class="filter-btn" data-filter="industrial">Industrial</button>
+            </div>
+            
+            <div class="case-studies-grid" data-aos="fade-up" data-aos-delay="200">
+                <!-- Case Study 1 -->
+                <div class="case-study-card" data-category="business" data-description="A 12-story office complex in San Francisco implemented Energenius across all systems, resulting in a 38% reduction in energy consumption and $87,000 in annual savings. The comprehensive solution included smart HVAC optimization, lighting controls, and real-time monitoring.">
+                    <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3')"></div>
+                    <div class="card-content">
+                        <div class="card-category">Business</div>
+                        <h3>Tech Office Complex</h3>
+                        <div class="card-stats">
+                            <div class="stat">
+                                <span class="value">38%</span>
+                                <span class="label">Energy Reduction</span>
+                            </div>
+                            <div class="stat">
+                                <span class="value">$87K</span>
+                                <span class="label">Annual Savings</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-floating-elements">
+                        <div class="floating-element e1"><i class="fas fa-building"></i></div>
+                        <div class="floating-element e2"><i class="fas fa-chart-line"></i></div>
+                        <div class="floating-element e3"><i class="fas fa-leaf"></i></div>
+                    </div>
+                </div>
+                
+                <!-- Case Study 2 -->
+                <div class="case-study-card" data-category="residential" data-description="A 50-home residential community implemented Energenius for individual homes and shared facilities, achieving a 29% reduction in energy consumption with a remarkable 42% ROI in the first year. Smart thermostats and energy-efficient appliance recommendations were key components.">
+                    <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3')"></div>
+                    <div class="card-content">
+                        <div class="card-category">Residential</div>
+                        <h3>Smart Home Community</h3>
+                        <div class="card-stats">
+                            <div class="stat">
+                                <span class="value">29%</span>
+                                <span class="label">Energy Reduction</span>
+                            </div>
+                            <div class="stat">
+                                <span class="value">42%</span>
+                                <span class="label">ROI in Year 1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-floating-elements">
+                        <div class="floating-element e1"><i class="fas fa-home"></i></div>
+                        <div class="floating-element e2"><i class="fas fa-plug"></i></div>
+                        <div class="floating-element e3"><i class="fas fa-sun"></i></div>
+                    </div>
+                </div>
+                
+                <!-- Case Study 3 -->
+                <div class="case-study-card" data-category="industrial" data-description="A large automotive parts manufacturing facility implemented Energenius across production lines and facility management, cutting energy use by 45% and saving $210,000 annually. The solution focused on industrial equipment optimization and peak demand management.">
+                    <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1581093588401-fbb62a02f120?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3')"></div>
+                    <div class="card-content">
+                        <div class="card-category">Industrial</div>
+                        <h3>Manufacturing Plant</h3>
+                        <div class="card-stats">
+                            <div class="stat">
+                                <span class="value">45%</span>
+                                <span class="label">Energy Reduction</span>
+                            </div>
+                            <div class="stat">
+                                <span class="value">$210K</span>
+                                <span class="label">Annual Savings</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-floating-elements">
+                        <div class="floating-element e1"><i class="fas fa-industry"></i></div>
+                        <div class="floating-element e2"><i class="fas fa-bolt"></i></div>
+                        <div class="floating-element e3"><i class="fas fa-cog"></i></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="view-more-container" data-aos="fade-up" data-aos-delay="300">
+                <a href="#" class="btn btn-secondary">
+                    <span>View All Case Studies</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <div class="pulse-circle"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="download" style="background-color: #0f1120;">
+        <div class="background-glow"></div>
+        <div class="download-floating-elements">
+            <div class="floating-element element-1"></div>
+            <div class="floating-element element-2"></div>
+            <div class="floating-element element-3"></div>
+        </div>
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Download</span>
+                <h2>Start Managing Your Energy Today</h2>
+                <p>Download our application and take the first step towards smarter energy management.</p>
+            </div>
+            
+            <div class="download-wrapper" data-aos="fade-up" data-aos-delay="200">
+                <div class="device-display">
+                    <div class="device-frame">
+                        <div class="device-screen">
+                            <img src="assets/images/dashboard-preview.svg" alt="App Dashboard Preview" class="app-preview">
+                            <div class="screen-overlay"></div>
+                        </div>
+                        <div class="device-notch"></div>
+                        <div class="device-buttons"></div>
+                    </div>
+                </div>
+                
+                <div class="download-content">
+                    <div class="download-features">
+                        <h3 class="features-title">Key Features</h3>
+                        <div class="download-feature">
+                            <div class="feature-icon-wrap">
+                                <i class="fas fa-chart-line"></i>
+                        </div>
+                            <div class="feature-text">
+                                <h4>Real-time Monitoring</h4>
+                                <p>Track your energy usage in real-time across all your devices</p>
+                            </div>
+                        </div>
+                        <div class="download-feature">
+                            <div class="feature-icon-wrap">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Energy Optimization</h4>
+                                <p>AI-powered suggestions to reduce consumption and costs</p>
+                            </div>
+                        </div>
+                        <div class="download-feature">
+                            <div class="feature-icon-wrap">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Cross-platform Compatibility</h4>
+                                <p>Available on all major platforms and devices</p>
+                            </div>
+                        </div>
+                        <div class="download-feature">
+                            <div class="feature-icon-wrap">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Secure & Private</h4>
+                                <p>Enterprise-grade security for your energy data</p>
+                        </div>
+                    </div>
+                </div>
+                
+                    <div class="download-actions">
+                        <h3 class="platforms-title">Available On</h3>
+                        <div class="platform-selector">
+                            <div class="platform-option active" data-platform="mobile">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>Mobile</span>
+                            </div>
+                            <div class="platform-option" data-platform="desktop">
+                                <i class="fas fa-desktop"></i>
+                                <span>Desktop</span>
+                            </div>
+                            <div class="platform-option" data-platform="web">
+                                <i class="fas fa-globe"></i>
+                                <span>Web App</span>
+                            </div>
+                        </div>
+                        
+                        <div class="platform-buttons" id="mobile-buttons">
+                        <a href="#" class="btn btn-platform">
+                            <i class="fab fa-google-play"></i>
+                            <div class="platform-text">
+                                <span>Download on</span>
+                                <p>Google Play</p>
+                            </div>
+                        </a>
+                        <a href="#" class="btn btn-platform">
+                            <i class="fab fa-apple"></i>
+                            <div class="platform-text">
+                                <span>Download on</span>
+                                <p>App Store</p>
+                            </div>
+                        </a>
+                        </div>
+                        
+                        <div class="platform-buttons" id="desktop-buttons" style="display: none;">
+                        <a href="#" class="btn btn-platform">
+                            <i class="fab fa-windows"></i>
+                            <div class="platform-text">
+                                <span>Download for</span>
+                                <p>Windows</p>
+                            </div>
+                        </a>
+                            <a href="#" class="btn btn-platform">
+                                <i class="fab fa-apple"></i>
+                                <div class="platform-text">
+                                    <span>Download for</span>
+                                    <p>macOS</p>
+                            </div>
+                        </a>
+                        <a href="#" class="btn btn-platform">
+                            <i class="fab fa-linux"></i>
+                            <div class="platform-text">
+                                <span>Download for</span>
+                                <p>Linux</p>
+                            </div>
+                        </a>
+                    </div>
+                        
+                        <div class="platform-buttons" id="web-buttons" style="display: none;">
+                            <a href="#" class="btn btn-platform">
+                                <i class="fas fa-globe"></i>
+                                <div class="platform-text">
+                                    <span>Access</span>
+                                    <p>Web App</p>
+                </div>
+                            </a>
+                        </div>
+                        
+                        <div class="qr-code-container">
+                            <div class="qr-code">
+                                <div class="qr-code-image"></div>
+                                <p>Scan to download</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="download-version" data-aos="fade-up" data-aos-delay="300">
+                <div class="version-info">
+                    <span class="version-label">Latest Version:</span>
+                    <span class="version-number">v2.4.1</span>
+                    <span class="version-date">Released: June 15, 2023</span>
+                </div>
+                <a href="#" class="version-changelog">View Changelog</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact" style="background-color: #0f1120;">
+        <div class="contact-bg-pattern"></div>
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Contact Us</span>
+                <h2>Get in Touch</h2>
+                <p>Have questions or need assistance? Our team is here to help you with personalized support.</p>
+            </div>
+            
+            <div class="contact-grid">
+                <!-- Left Side - Map and Info -->
+                <div class="contact-map-container" data-aos="fade-right" data-aos-delay="100">
+                    <div class="contact-map">
+                        <div class="map-overlay">
+                            <div class="pulse-dot"></div>
+                            <div class="map-info">
+                                <h4>Our Headquarters</h4>
+                                <p>123 Innovation Street, Tech City, TC 10101</p>
+                            </div>
+                        </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158858.47340002292!2d-0.24168120642536509!3d51.52855824164916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20UK!5e0!3m2!1sen!2suk!4v1656543745932!5m2!1sen!2suk" 
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    
+                    <div class="contact-info-cards">
+                        <div class="contact-info-card" data-effect="tilt">
+                            <div class="card-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="card-content">
+                                <h4>Call Us</h4>
+                                <p>+1 (555) 123-4567</p>
+                                <p class="text-muted">Available 24/7 for support</p>
+                            </div>
+                            <div class="card-glow"></div>
+                        </div>
+                        
+                        <div class="contact-info-card" data-effect="tilt">
+                            <div class="card-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="card-content">
+                                <h4>Email Us</h4>
+                                <p>support@energenius.com</p>
+                                <p class="text-muted">Quick response within hours</p>
+                            </div>
+                            <div class="card-glow"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-social-links">
+                        <h4>Connect With Us</h4>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i><span class="tooltip">Facebook</span></a>
+                            <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i><span class="tooltip">Twitter</span></a>
+                            <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i><span class="tooltip">Instagram</span></a>
+                            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i><span class="tooltip">LinkedIn</span></a>
+                            <a href="#" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i><span class="tooltip">GitHub</span></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Side - Contact Form -->
+                <div class="contact-form-wrapper" data-aos="fade-left" data-aos-delay="200">
+                    <div class="form-floating-elements">
+                        <div class="floating-element element-1"></div>
+                        <div class="floating-element element-2"></div>
+                        <div class="floating-element element-3"></div>
+                    </div>
+                    
+                    <div class="form-container">
+                        <div class="form-header">
+                            <div class="form-icon">
+                                <i class="fas fa-paper-plane"></i>
+                            </div>
+                            <div class="form-title">
+                                <h3>Send a Message</h3>
+                                <p>We're excited to hear from you</p>
+                            </div>
+                        </div>
+                        
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-step active" data-step="1">
+                                <div class="form-group form-floating">
+                                    <input type="text" id="name" name="name" placeholder=" " required>
+                                    <label for="name">Your Name</label>
+                                    <div class="form-focus-border"></div>
+                                </div>
+                                
+                                <div class="form-group form-floating">
+                                    <input type="email" id="email" name="email" placeholder=" " required>
+                                    <label for="email">Your Email</label>
+                                    <div class="form-focus-border"></div>
+                                </div>
+                                
+                                <div class="form-group form-floating">
+                                    <input type="text" id="subject" name="subject" placeholder=" ">
+                                    <label for="subject">Subject</label>
+                                    <div class="form-focus-border"></div>
+                                </div>
+                                
+                                <div class="form-nav">
+                                    <button type="button" class="btn-next" data-next="2">
+                                        <span>Next Step</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="form-step" data-step="2">
+                                <div class="form-group form-floating">
+                                    <textarea id="message" name="message" placeholder=" " required></textarea>
+                                    <label for="message">Your Message</label>
+                                    <div class="form-focus-border"></div>
+                                </div>
+                                
+                                <div class="form-group form-checkbox">
+                                    <input type="checkbox" id="privacy" name="privacy" required>
+                                    <label for="privacy">
+                                        <span class="checkbox-icon"></span>
+                                        <span>I accept the <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a></span>
+                                    </label>
+                                </div>
+                                
+                                <div class="form-nav">
+                                    <button type="button" class="btn-prev" data-prev="1">
+                                        <i class="fas fa-arrow-left"></i>
+                                        <span>Back</span>
+                                    </button>
+                                    
+                                    <button type="submit" class="btn-submit">
+                                        <span>Send Message</span>
+                                        <i class="fas fa-paper-plane"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="form-progress">
+                                <div class="progress-step active" data-step="1"></div>
+                                <div class="progress-bar"></div>
+                                <div class="progress-step" data-step="2"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="newsletter-container" data-aos="fade-up" data-aos-delay="300">
+                <div class="newsletter-card">
+                    <div class="newsletter-illustration">
+                        <div class="newsletter-icon">
+                            <i class="fas fa-envelope-open-text"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="newsletter-content">
+                        <div class="newsletter-text">
+                            <h3>Stay Updated</h3>
+                            <p>Subscribe to our newsletter for the latest energy management insights, tips and exclusive offers.</p>
+                        </div>
+                        
+                        <form class="newsletter-form">
+                            <div class="newsletter-input-group">
+                                <div class="form-group">
+                                    <input type="email" id="newsletter-email" placeholder="Enter your email" required>
+                                    <div class="form-focus-border"></div>
+                                </div>
+                                <button type="submit" class="btn-newsletter" aria-label="Subscribe">
+                                    <span>Subscribe</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                            
+                            <div class="newsletter-checkbox">
+                                <input type="checkbox" id="newsletter-consent" required>
+                                <label for="newsletter-consent">
+                                    <span class="checkbox-icon"></span>
+                                    <span>I agree to receive emails and updates from Energenius</span>
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-particles" id="footerParticles">
+            <!-- Particles will be dynamically created by JS -->
+        </div>
+        <div class="footer-pattern-container">
+            <!-- Gradient patterns will be created by JS -->
+        </div>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about" data-aos="fade-up" data-aos-delay="100">
+                    <a href="index.html" class="footer-logo">
+                        <img src="assets/logo-white.svg" alt="Energenius Logo">
+                        <span>Energenius</span>
+                    </a>
+                    <p>Smart energy management solutions for a sustainable future. Save energy, reduce costs, and contribute to a greener planet with our innovative technology.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#features"><i class="fas fa-chevron-right"></i> Features</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="#download"><i class="fas fa-chevron-right"></i> Download</a></li>
+                        <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links" data-aos="fade-up" data-aos-delay="300">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="faq.html"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                        <li><a href="privacy-policy.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Support Center</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Documentation</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter" data-aos="fade-up" data-aos-delay="400">
+                    <h3>Stay Connected</h3>
+                    <p>Subscribe to our newsletter for the latest updates, energy-saving tips, and exclusive offers.</p>
+                    <form class="footer-newsletter-form">
+                        <div class="newsletter-form-container">
+                            <input type="email" placeholder="Your Email" required>
+                            <button type="submit" aria-label="Submit"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                        <div class="footer-newsletter-info">
+                            We respect your privacy. No spam, ever.
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Energenius. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#home" class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+    <button class="theme-toggle" id="themeToggle" style="z-index: 10000; background: #5e17eb; width: 60px; height: 60px; border: 3px solid white; right: 20px; bottom: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);" aria-label="Toggle theme">
+        <div class="icon-container">
+            <i class="fas fa-moon" style="font-size: 24px;"></i>
+            <i class="fas fa-sun" style="font-size: 24px;"></i>
+        </div>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/image-loader.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/footer-effects.js"></script>
+    <script src="js/contact-modern.js"></script>
+    <script src="js/success-stories.js"></script>
+</body>
+</html> 
+

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="icon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5e17eb" />
+      <stop offset="100%" stop-color="#00d4ff" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#5e17eb" flood-opacity="0.3"/>
+    </filter>
+    <clipPath id="circleClip">
+      <circle cx="256" cy="256" r="240" />
+    </clipPath>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="256" cy="256" r="256" fill="white" />
+  
+  <!-- Gradient Background -->
+  <circle cx="256" cy="256" r="240" fill="url(#icon-gradient)" filter="url(#shadow)" />
+  
+  <!-- Energy Bolt Icon -->
+  <g clip-path="url(#circleClip)">
+    <!-- Central Energy Bolt -->
+    <path d="M290,140 L200,260 L260,270 L220,380 L320,250 L260,240 Z" 
+          fill="white" 
+          stroke="white" 
+          stroke-width="8" 
+          stroke-linejoin="round"
+          opacity="0.9" />
+    
+    <!-- Circular Elements -->
+    <circle cx="180" cy="180" r="20" fill="white" opacity="0.6" />
+    <circle cx="330" cy="320" r="15" fill="white" opacity="0.6" />
+    <circle cx="150" cy="300" r="10" fill="white" opacity="0.6" />
+    
+    <!-- Radiating Lines -->
+    <g opacity="0.3">
+      <path d="M256,100 L256,50" stroke="white" stroke-width="8" stroke-linecap="round" />
+      <path d="M256,462 L256,412" stroke="white" stroke-width="8" stroke-linecap="round" />
+      <path d="M100,256 L50,256" stroke="white" stroke-width="8" stroke-linecap="round" />
+      <path d="M462,256 L412,256" stroke="white" stroke-width="8" stroke-linecap="round" />
+      <path d="M149,149 L114,114" stroke="white" stroke-width="8" stroke-linecap="round" />
+      <path d="M398,398 L363,363" stroke="white" stroke-width="8" stroke-linecap="round" />
+      <path d="M149,363 L114,398" stroke="white" stroke-width="8" stroke-linecap="round" />
+      <path d="M398,114 L363,149" stroke="white" stroke-width="8" stroke-linecap="round" />
+    </g>
+  </g>
+  
+  <!-- Letter E for Energenius -->
+  <path d="M232,295 C232,310 244,320 256,320 C268,320 280,310 280,295 L280,280 L256,280 L256,265 L280,265 L280,250 L256,250 L256,235 L280,235 L280,220 C280,205 268,195 256,195 C244,195 232,205 232,220 Z" 
+        fill="white" 
+        opacity="0.95" />
+</svg> 

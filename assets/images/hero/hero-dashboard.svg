@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <!-- Dashboard Background -->
+  <rect x="50" y="50" width="700" height="500" rx="20" ry="20" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+  
+  <!-- Header -->
+  <rect x="50" y="50" width="700" height="60" rx="20" ry="20" fill="#5e17eb"/>
+  <text x="90" y="88" font-family="Arial" font-size="24" fill="white" font-weight="bold">Energenius Dashboard</text>
+  
+  <!-- Time Period Selector -->
+  <rect x="550" y="65" width="170" height="30" rx="15" ry="15" fill="white" opacity="0.2"/>
+  <text x="570" y="87" font-family="Arial" font-size="14" fill="white">Last 30 Days ↓</text>
+  
+  <!-- Main Content -->
+  
+  <!-- Energy Consumption Panel -->
+  <rect x="70" y="130" width="320" height="200" rx="10" ry="10" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="90" y="160" font-family="Arial" font-size="18" fill="#121432" font-weight="bold">Energy Consumption</text>
+  
+  <!-- Graph -->
+  <polyline points="90,280 130,240 170,260 210,230 250,210 290,240 330,200 370,190" fill="none" stroke="#5e17eb" stroke-width="3"/>
+  <rect x="90" y="180" width="280" height="1" fill="#e2e8f0"/>
+  <rect x="90" y="220" width="280" height="1" fill="#e2e8f0"/>
+  <rect x="90" y="260" width="280" height="1" fill="#e2e8f0"/>
+  <rect x="90" y="300" width="280" height="1" fill="#e2e8f0"/>
+  
+  <!-- Savings Panel -->
+  <rect x="410" y="130" width="320" height="200" rx="10" ry="10" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="430" y="160" font-family="Arial" font-size="18" fill="#121432" font-weight="bold">Savings</text>
+  
+  <!-- Circular Progress -->
+  <circle cx="520" cy="230" r="70" fill="none" stroke="#e2e8f0" stroke-width="15"/>
+  <path d="M 520 160 A 70 70 0 1 1 450 230" fill="none" stroke="#5e17eb" stroke-width="15" stroke-linecap="round"/>
+  <text x="495" y="240" font-family="Arial" font-size="28" fill="#5e17eb" font-weight="bold">28%</text>
+  
+  <!-- Device Usage Panel -->
+  <rect x="70" y="350" width="320" height="180" rx="10" ry="10" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="90" y="380" font-family="Arial" font-size="18" fill="#121432" font-weight="bold">Device Usage</text>
+  
+  <!-- Device Bars -->
+  <rect x="90" y="400" width="240" height="20" rx="5" ry="5" fill="#e2e8f0"/>
+  <rect x="90" y="400" width="180" height="20" rx="5" ry="5" fill="#5e17eb"/>
+  <text x="340" y="415" font-family="Arial" font-size="14" fill="#121432">75%</text>
+  <text x="90" y="430" font-family="Arial" font-size="12" fill="#4a4f6a">Heating</text>
+  
+  <rect x="90" y="440" width="240" height="20" rx="5" ry="5" fill="#e2e8f0"/>
+  <rect x="90" y="440" width="130" height="20" rx="5" ry="5" fill="#00d4ff"/>
+  <text x="340" y="455" font-family="Arial" font-size="14" fill="#121432">54%</text>
+  <text x="90" y="470" font-family="Arial" font-size="12" fill="#4a4f6a">Lighting</text>
+  
+  <rect x="90" y="480" width="240" height="20" rx="5" ry="5" fill="#e2e8f0"/>
+  <rect x="90" y="480" width="95" height="20" rx="5" ry="5" fill="#27f2aa"/>
+  <text x="340" y="495" font-family="Arial" font-size="14" fill="#121432">40%</text>
+  <text x="90" y="510" font-family="Arial" font-size="12" fill="#4a4f6a">Appliances</text>
+  
+  <!-- Tips Panel -->
+  <rect x="410" y="350" width="320" height="180" rx="10" ry="10" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="430" y="380" font-family="Arial" font-size="18" fill="#121432" font-weight="bold">Energy-Saving Tips</text>
+  
+  <!-- Tips -->
+  <circle cx="440" cy="410" r="8" fill="#5e17eb"/>
+  <text x="460" y="415" font-family="Arial" font-size="14" fill="#4a4f6a">Lower thermostat by 1°C to save 10%</text>
+  
+  <circle cx="440" cy="445" r="8" fill="#00d4ff"/>
+  <text x="460" y="450" font-family="Arial" font-size="14" fill="#4a4f6a">Replace lights with LED bulbs</text>
+  
+  <circle cx="440" cy="480" r="8" fill="#27f2aa"/>
+  <text x="460" y="485" font-family="Arial" font-size="14" fill="#4a4f6a">Use appliances during off-peak hours</text>
+  
+  <!-- Notification Icon -->
+  <circle cx="720" y="75" r="15" fill="white" opacity="0.2"/>
+  <text x="717" y="81" font-family="Arial" font-size="18" fill="white">🔔</text>
+  
+  <!-- User Icon -->
+  <circle cx="675" y="75" r="15" fill="white" opacity="0.2"/>
+  <text x="670" y="81" font-family="Arial" font-size="18" fill="white">👤</text>
+</svg> 

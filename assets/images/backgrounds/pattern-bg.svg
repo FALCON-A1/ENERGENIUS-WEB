@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <defs>
+    <!-- Pattern Definitions -->
+    <pattern id="smallGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#5e17eb" stroke-width="0.5" opacity="0.05"/>
+    </pattern>
+    
+    <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+      <rect width="100" height="100" fill="url(#smallGrid)"/>
+      <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#5e17eb" stroke-width="1" opacity="0.1"/>
+    </pattern>
+    
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5e17eb" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#00d4ff" stop-opacity="0.03"/>
+    </linearGradient>
+    
+    <radialGradient id="circle-gradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#5e17eb" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#5e17eb" stop-opacity="0"/>
+    </radialGradient>
+    
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="600" fill="url(#bg-gradient)"/>
+  <rect width="600" height="600" fill="url(#grid)"/>
+  
+  <!-- Decorative Elements -->
+  <circle cx="150" cy="150" r="200" fill="url(#circle-gradient)" filter="url(#blur)"/>
+  <circle cx="450" cy="450" r="150" fill="url(#circle-gradient)" filter="url(#blur)"/>
+  
+  <!-- Floating Elements -->
+  <g opacity="0.2">
+    <circle cx="100" cy="200" r="10" fill="#5e17eb"/>
+    <circle cx="500" cy="150" r="8" fill="#00d4ff"/>
+    <circle cx="300" cy="100" r="12" fill="#27f2aa"/>
+    <circle cx="400" cy="400" r="15" fill="#5e17eb"/>
+    <circle cx="150" cy="500" r="6" fill="#00d4ff"/>
+    <circle cx="550" cy="350" r="9" fill="#27f2aa"/>
+    <circle cx="250" cy="450" r="7" fill="#5e17eb"/>
+  </g>
+  
+  <!-- Energy Icons -->
+  <g opacity="0.1">
+    <!-- Lightning Bolt -->
+    <path d="M 180 300 L 160 350 L 190 350 L 170 400" stroke="#5e17eb" stroke-width="3" fill="none"/>
+    
+    <!-- Light Bulb -->
+    <circle cx="300" cy="320" r="15" stroke="#00d4ff" stroke-width="2" fill="none"/>
+    <path d="M 290 335 L 290 350 L 310 350 L 310 335" stroke="#00d4ff" stroke-width="2" fill="none"/>
+    
+    <!-- House -->
+    <path d="M 400 340 L 430 320 L 460 340 L 460 370 L 400 370 Z" stroke="#27f2aa" stroke-width="2" fill="none"/>
+    <rect x="420" y="350" width="20" height="20" stroke="#27f2aa" stroke-width="2" fill="none"/>
+  </g>
+</svg> 
