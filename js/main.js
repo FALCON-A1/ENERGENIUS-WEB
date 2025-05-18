@@ -16,6 +16,57 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
+    // Make mouse scroll indicator clickable
+    const scrollIndicator = document.querySelector('.mouse-scroll-indicator');
+    if (scrollIndicator) {
+        scrollIndicator.addEventListener('click', function() {
+            const featuresSection = document.querySelector('#features');
+            if (featuresSection) {
+                featuresSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    }
+    
+    // Make the bolt icon interactive
+    const boltIcon = document.querySelector('.hero-badge i.fas.fa-bolt');
+    if (boltIcon) {
+        boltIcon.addEventListener('click', function() {
+            // Create an energetic effect when clicked
+            const badge = document.querySelector('.hero-badge');
+            
+            // Add a special animation class
+            badge.classList.add('energized');
+            
+            // Create lightning effect elements around the icon
+            for (let i = 0; i < 5; i++) {
+                const lightning = document.createElement('div');
+                lightning.classList.add('lightning-bolt');
+                
+                // Random position and rotation
+                const angle = Math.random() * 360;
+                const distance = 20 + Math.random() * 30;
+                const x = Math.cos(angle * Math.PI / 180) * distance;
+                const y = Math.sin(angle * Math.PI / 180) * distance;
+                
+                lightning.style.left = `calc(50% + ${x}px)`;
+                lightning.style.top = `calc(50% + ${y}px)`;
+                lightning.style.transform = `rotate(${angle}deg) scale(${0.5 + Math.random() * 0.5})`;
+                
+                badge.appendChild(lightning);
+                
+                // Remove after animation
+                setTimeout(() => {
+                    lightning.remove();
+                }, 1000);
+            }
+            
+            // Remove the energized class after animation completes
+            setTimeout(() => {
+                badge.classList.remove('energized');
+            }, 1000);
+        });
+    }
+    
     // Ensure about section image loads properly
     const aboutImg = document.querySelector('.about-image-wrapper img');
     if (aboutImg) {
@@ -1098,7 +1149,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Dark Mode Toggle
     const themeToggle = document.getElementById('themeToggle');
-    const themeToggleMobile = document.getElementById('themeToggleMobile');
     
     // Check for saved theme preference or respect OS preference
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
@@ -1119,11 +1169,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (themeToggle) {
         themeToggle.addEventListener('click', toggleDarkMode);
     }
-    
-    // Add click event to mobile theme toggle
-    if (themeToggleMobile) {
-        themeToggleMobile.addEventListener('click', toggleDarkMode);
-        }
     
     // Back to top button
     const backToTopButton = document.getElementById('backToTop');

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -18,18 +18,9 @@
     <link rel="stylesheet" href="css/newsletter.css">
     <link rel="stylesheet" href="css/footer-modern.css">
     <link rel="stylesheet" href="css/success-stories.css">
+    <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
-    <!-- Font Awesome Icon Test - Remove after confirming -->
-    <div style="position: fixed; top: 20px; right: 20px; z-index: 9999; font-size: 24px; color: red;">
-        <i class="fas fa-check-circle"></i>
-    </div>
-    
-    <!-- Standalone Dark Mode Toggle - Remove after original works -->
-    <button onclick="document.body.classList.toggle('dark-mode')" style="position: fixed; top: 60px; right: 20px; z-index: 9999; padding: 10px; background: #5e17eb; color: white; border: none; border-radius: 50%; width: 40px; height: 40px;">
-        <i class="fas fa-moon"></i>
-    </button>
-    
     <div class="preloader" id="preloader">
         <div class="loader"></div>
         <div class="loader-text">Energenius</div>
@@ -40,14 +31,14 @@
             <nav class="navbar">
                 <div class="logo-container">
                     <a href="index.html" class="logo">
-                        <img src="assets/logo.svg" alt="Energenius Logo" class="logo-img">
+                        <img src="assets/logo.png" alt="Energenius Logo" class="logo-img">
                         <span>Energenius</span>
                     </a>
                 </div>
                 <div class="nav-links" id="navLinks">
                     <ul>
                         <li><a href="#home" class="active">Home</a></li>
-                        <li><a href="#features">Features <span class="nav-feature-badge">New</span></a></li>
+                        <li><a href="#features">Features</a></li>
                         <li class="has-dropdown">
                             <a href="about.html">About <i class="fas fa-chevron-down nav-arrow"></i></a>
                             <div class="nav-dropdown">
@@ -60,14 +51,9 @@
                         <li><a href="#download">Download</a></li>
                         <li><a href="gallery.html">Gallery</a></li>
                         <li><a href="#contact">Contact</a></li>
-                        <li class="nav-cta"><a href="darkmode-test.html" class="btn btn-primary btn-sm">Try Demo</a></li>
                     </ul>
                 </div>
                 <div class="nav-actions">
-                    <button class="theme-toggle-small" id="themeToggleMobile" aria-label="Toggle dark mode">
-                        <i class="fas fa-moon"></i>
-                        <i class="fas fa-sun"></i>
-                    </button>
                     <button class="open-menu" id="openMenu" aria-label="Open menu">
                         <i class="fas fa-bars"></i>
                     </button>
@@ -131,7 +117,7 @@
                 </div>
                 
                 <div class="cta-buttons">
-                    <a href="#download" class="btn btn-primary pulse-effect">
+                    <a href="#download" class="btn btn-primary hover-effect">
                         <span>Get Started</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
@@ -140,16 +126,16 @@
                         <i class="fas fa-info-circle"></i>
                     </a>
                 </div>
-                
-                <!-- Mouse scroll indicator -->
-                <div class="mouse-scroll-indicator">
-                    <div class="mouse">
-                        <div class="wheel"></div>
             </div>
-                    <div class="arrows">
-                        <span class="arrow-down"></span>
-                        <span class="arrow-down"></span>
-                    </div>
+            
+            <!-- Mouse scroll indicator -->
+            <div class="mouse-scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div class="arrows">
+                    <span class="arrow-down"></span>
+                    <span class="arrow-down"></span>
                 </div>
             </div>
             
@@ -163,16 +149,16 @@
                             <div class="dashboard-element element-1">
                                 <i class="fas fa-chart-line"></i>
                                 <span>Live Analytics</span>
-                    </div>
+                            </div>
                             <div class="dashboard-element element-2">
                                 <i class="fas fa-lightbulb"></i>
                                 <span>Smart Control</span>
-                </div>
+                            </div>
                             <div class="dashboard-element element-3">
                                 <i class="fas fa-shield-alt"></i>
                                 <span>Secure Data</span>
-            </div>
-        </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -414,7 +400,7 @@
                 <div class="about-content" data-aos="fade-left" data-aos-duration="1000">
                     <span class="section-label">About Us</span>
                     <h2 class="about-title">Revolutionizing Energy Management</h2>
-                    <p class="about-description">Founded in 2020, Energenius is on a mission to transform how homes and businesses manage their energy consumption.</p>
+                    <p class="about-description">Founded in 2024, Energenius is on a mission to transform how homes and businesses manage their energy consumption.</p>
                     <p class="about-description">Our team of experts in energy management, AI, and IoT has developed a groundbreaking solution that makes energy optimization accessible to everyone.</p>
                     
                     <div class="stats-grid">
@@ -1092,7 +1078,7 @@
             <div class="footer-grid">
                 <div class="footer-about" data-aos="fade-up" data-aos-delay="100">
                     <a href="index.html" class="footer-logo">
-                        <img src="assets/logo-white.svg" alt="Energenius Logo">
+                        <img src="assets/logo.png" alt="Energenius Logo">
                         <span>Energenius</span>
                     </a>
                     <p>Smart energy management solutions for a sustainable future. Save energy, reduce costs, and contribute to a greener planet with our innovative technology.</p>

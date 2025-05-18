@@ -1,0 +1,121 @@
+/* Custom CSS overrides */
+
+/* Center the mouse scroll indicator and make it clickable */
+.mouse-scroll-indicator {
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 10 !important;
+  cursor: pointer !important;
+  transition: transform 0.3s ease !important;
+}
+
+.mouse-scroll-indicator:hover {
+  transform: translateX(-50%) scale(1.1) !important;
+}
+
+.mouse-scroll-indicator:active {
+  transform: translateX(-50%) scale(0.95) !important;
+}
+
+/* Custom bolt icon animation in hero badge */
+.hero-badge i.fas.fa-bolt {
+  animation: bolt-bounce 2s infinite !important;
+  display: inline-block !important;
+  transform-origin: center !important;
+  animation-name: bolt-bounce !important;
+  color: var(--primary-color) !important;
+  text-shadow: 0 0 5px rgba(94, 23, 235, 0.5) !important;
+  cursor: pointer !important;
+  position: relative !important;
+}
+
+.hero-badge i.fas.fa-bolt::after {
+  content: "Cutting-edge energy technology!" !important;
+  position: absolute !important;
+  bottom: -40px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  color: white !important;
+  padding: 5px 10px !important;
+  border-radius: 5px !important;
+  font-size: 12px !important;
+  white-space: nowrap !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transition: opacity 0.3s, visibility 0.3s !important;
+  font-family: var(--font-primary) !important;
+  font-weight: normal !important;
+  z-index: 100 !important;
+}
+
+.hero-badge i.fas.fa-bolt:hover::after {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Lightning effect when bolt is clicked */
+.hero-badge.energized {
+  animation: badge-pulse 1s ease !important;
+  position: relative !important;
+}
+
+@keyframes badge-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 149, 0, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(255, 149, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 149, 0, 0);
+  }
+}
+
+.lightning-bolt {
+  position: absolute !important;
+  width: 3px !important;
+  height: 20px !important;
+  background: linear-gradient(to bottom, #ff9500, #ffcc00) !important;
+  border-radius: 2px !important;
+  opacity: 0 !important;
+  z-index: 5 !important;
+  animation: lightning-flash 0.5s ease-out forwards !important;
+}
+
+@keyframes lightning-flash {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+}
+
+@keyframes bolt-bounce {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    color: var(--primary-color);
+  }
+  25% {
+    transform: scale(1.2) rotate(15deg);
+    color: #ff9500;
+  }
+  50% {
+    transform: scale(1) rotate(0deg);
+    color: var(--primary-color);
+  }
+  75% {
+    transform: scale(1.2) rotate(-15deg);
+    color: #ff9500;
+  }
+} 
