@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Center | Energenius</title>
+    <meta name="description" content="Get help and support for your Energenius energy management system. Access troubleshooting guides, FAQs, and contact our support team.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/newsletter.css">
+    <link rel="stylesheet" href="css/support-center.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+</head>
+<body>
+    <div class="preloader" id="preloader">
+        <div class="loader"></div>
+        <div class="loader-text">Energenius</div>
+    </div>
+    
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo-container">
+                    <a href="index.html" class="logo">
+                        <img src="assets/logo.png" alt="Energenius Logo" class="logo-img">
+                        <span>Energenius</span>
+                    </a>
+                </div>
+                <div class="nav-links" id="navLinks">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li class="has-dropdown">
+                            <a href="about.html">About <i class="fas fa-chevron-down nav-arrow"></i></a>
+                            <div class="nav-dropdown">
+                                <a href="about.html#mission">Our Mission</a>
+                                <a href="about.html#team">Our Team</a>
+                                <a href="about.html#story">Our Story</a>
+                                <a href="about.html#values">Our Values</a>
+                            </div>
+                        </li>
+                        <li><a href="index.html#download">Download</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+                    <button class="open-menu" id="openMenu" aria-label="Open menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+            <div class="scroll-progress"></div>
+        </div>
+        <button class="close-menu" id="closeMenu" aria-label="Close menu">
+            <i class="fas fa-times"></i>
+        </button>
+    </header>
+
+    <section class="support-hero">
+        <div id="supportHeroParticles" class="hero-particles"></div>
+        <div class="container">
+            <div class="support-hero-content">
+                <h1>Support Center</h1>
+                <p>We're here to help you get the most out of your Energenius system. Find answers, troubleshooting guides, and direct support from our team.</p>
+                <div class="support-search-container">
+                    <div class="support-search">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="supportSearch" placeholder="Search for support articles...">
+                        <button class="search-clear" id="searchClear">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="breadcrumbs">
+                    <a href="index.html">Home</a>
+                    <span class="separator">/</span>
+                    <span class="current">Support Center</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="wave-divider">
+            <svg class="animated-wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path class="wave-path" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,128C672,128,768,160,864,160C960,160,1056,128,1152,117.3C1248,107,1344,117,1392,122.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <section class="support-categories">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">How Can We Help?</span>
+                <h2>Support Categories</h2>
+                <p>Find the support you need by selecting a category below</p>
+            </div>
+            <div class="categories-grid" data-aos="fade-up">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Installation & Setup</h3>
+                    <p>Step-by-step guides to set up your Energenius devices and connect to your smart home.</p>
+                    <a href="#" class="category-link">View Guides <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile App Support</h3>
+                    <p>Troubleshoot app issues, learn about features, and get the most from your dashboard.</p>
+                    <a href="#" class="category-link">App Help <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Firmware Updates</h3>
+                    <p>How to update your devices and troubleshoot common update issues.</p>
+                    <a href="#" class="category-link">Update Guides <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3>Connectivity Issues</h3>
+                    <p>Solutions for WiFi connection problems and device communication issues.</p>
+                    <a href="#" class="category-link">Connectivity Help <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Data & Analytics</h3>
+                    <p>Understanding your energy data, charts, and optimization recommendations.</p>
+                    <a href="#" class="category-link">Data Guide <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h3>Advanced Settings</h3>
+                    <p>Configure advanced features, integrations, and automation rules.</p>
+                    <a href="#" class="category-link">Advanced Setup <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="popular-articles">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Quick Help</span>
+                <h2>Popular Support Articles</h2>
+                <p>Our most frequently accessed support resources</p>
+            </div>
+            
+            <div class="articles-grid" data-aos="fade-up">
+                <div class="article-card">
+                    <div class="article-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h3>How to Reset Your Energy Monitor</h3>
+                    <p>Learn the proper procedure for resetting your Energenius monitor when experiencing issues.</p>
+                    <span class="article-meta">Last updated: 2 weeks ago</span>
+                    <a href="#" class="article-link">Read Guide <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="article-card">
+                    <div class="article-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Optimizing Energy Usage During Peak Hours</h3>
+                    <p>Tips and settings to reduce energy consumption during high-cost periods.</p>
+                    <span class="article-meta">Last updated: 3 days ago</span>
+                    <a href="#" class="article-link">Read Guide <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="article-card">
+                    <div class="article-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Integrating With Smart Home Systems</h3>
+                    <p>Connect Energenius with popular platforms like Google Home, Alexa, and HomeKit.</p>
+                    <span class="article-meta">Last updated: 1 week ago</span>
+                    <a href="#" class="article-link">Read Guide <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="article-card">
+                    <div class="article-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h3>Troubleshooting Connection Issues</h3>
+                    <p>Solutions for common WiFi and device connection problems.</p>
+                    <span class="article-meta">Last updated: 5 days ago</span>
+                    <a href="#" class="article-link">Read Guide <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="article-card">
+                    <div class="article-icon">
+                        <i class="fas fa-battery-three-quarters"></i>
+                    </div>
+                    <h3>Extending Battery Life on Wireless Sensors</h3>
+                    <p>Maximize the lifespan of your battery-powered Energenius components.</p>
+                    <span class="article-meta">Last updated: 2 weeks ago</span>
+                    <a href="#" class="article-link">Read Guide <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="article-card">
+                    <div class="article-icon">
+                        <i class="fas fa-user-cog"></i>
+                    </div>
+                    <h3>Managing Multiple User Accounts</h3>
+                    <p>How to set up and manage different access levels for family members or employees.</p>
+                    <span class="article-meta">Last updated: 1 month ago</span>
+                    <a href="#" class="article-link">Read Guide <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="view-all-container" data-aos="fade-up">
+                <a href="#" class="btn btn-primary">View All Support Articles</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="support-contact">
+        <div class="container">
+            <div class="contact-grid" data-aos="fade-up">
+                <div class="contact-info">
+                    <div class="section-header">
+                        <span class="section-label">Get In Touch</span>
+                        <h2>Contact Our Support Team</h2>
+                        <p>Need personalized help? Our support team is ready to assist you with any issues or questions.</p>
+                    </div>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-details">
+                                <h3>Email Support</h3>
+                                <p>For non-urgent issues or detailed questions</p>
+                                <a href="mailto:support@energenius.com">support@energenius.com</a>
+                                <span class="response-time">Response within 24 hours</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="method-details">
+                                <h3>Phone Support</h3>
+                                <p>For immediate assistance with critical issues</p>
+                                <a href="tel:+18003637499">+1 (800) ENERGY</a>
+                                <span class="response-time">Available Mon-Fri, 9AM-6PM EST</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-comment-dots"></i>
+                            </div>
+                            <div class="method-details">
+                                <h3>Live Chat</h3>
+                                <p>Chat directly with a support representative</p>
+                                <a href="#" class="btn btn-outline btn-sm">Start Chat</a>
+                                <span class="response-time">Available 24/7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <div class="form-card">
+                        <h3>Send Us a Message</h3>
+                        <form class="support-form" id="supportForm">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="" disabled selected>Select an issue type</option>
+                                    <option value="installation">Installation Problem</option>
+                                    <option value="connectivity">Connectivity Issue</option>
+                                    <option value="app">Mobile App Problem</option>
+                                    <option value="account">Account Issue</option>
+                                    <option value="hardware">Hardware Problem</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            
+                            <div class="form-group form-checkbox">
+                                <input type="checkbox" id="priority" name="priority">
+                                <label for="priority">Mark as urgent issue</label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-preview">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Quick Answers</span>
+                <h2>Frequently Asked Questions</h2>
+                <p>Find quick answers to common questions about Energenius products and services</p>
+            </div>
+            
+            <div class="faq-preview-content" data-aos="fade-up">
+                <div class="accordion-container">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>What should I do if my device won't connect to WiFi?</h3>
+                            <div class="accordion-icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-minus"></i>
+                            </div>
+                        </div>
+                        <div class="accordion-content">
+                            <p>If your Energenius device is not connecting to WiFi, try these troubleshooting steps:</p>
+                            <ol>
+                                <li>Ensure your WiFi network is operational and your internet connection is stable.</li>
+                                <li>Verify that your WiFi signal is strong enough where the device is installed. Consider using a WiFi extender if needed.</li>
+                                <li>Restart your WiFi router and the Energenius device.</li>
+                                <li>Check that you've entered the correct WiFi password during setup.</li>
+                                <li>Make sure your WiFi operates on the 2.4GHz band, as some of our devices don't support 5GHz networks.</li>
+                                <li>Reset the device to factory settings by pressing and holding the reset button for 10 seconds.</li>
+                            </ol>
+                            <p>If the issue persists, please contact our technical support team for assistance.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>How do I update the firmware on my devices?</h3>
+                            <div class="accordion-icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-minus"></i>
+                            </div>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Firmware updates are automatically managed through the Energenius app. However, you can manually check for updates by following these steps:</p>
+                            <ol>
+                                <li>Open the Energenius mobile app and log in to your account.</li>
+                                <li>Go to Settings > Devices.</li>
+                                <li>Select the device you want to update.</li>
+                                <li>Tap on "Device Info" and then "Check for Updates."</li>
+                                <li>If an update is available, tap "Update Now" and follow the on-screen instructions.</li>
+                            </ol>
+                            <p>Important: Keep your device plugged in and connected to WiFi during the update process. Do not power off the device or close the app until the update is complete.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>Can I use Energenius with my existing smart home system?</h3>
+                            <div class="accordion-icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-minus"></i>
+                            </div>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Yes, Energenius is designed to integrate seamlessly with most popular smart home systems. We officially support:</p>
+                            <ul>
+                                <li>Amazon Alexa</li>
+                                <li>Google Home</li>
+                                <li>Apple HomeKit</li>
+                                <li>Samsung SmartThings</li>
+                                <li>IFTTT</li>
+                                <li>Home Assistant</li>
+                            </ul>
+                            <p>To set up an integration, go to Settings > Integrations in the Energenius app, and select your smart home platform. Follow the on-screen instructions to complete the connection process.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="view-all-faq">
+                    <a href="faq.html" class="btn btn-outline">View All FAQs</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="support-cta">
+        <div class="container">
+            <div class="cta-wrapper" data-aos="fade-up">
+                <div class="cta-content">
+                    <h2>Need More Help?</h2>
+                    <p>Our team of energy management experts is ready to help you get the most out of your Energenius system.</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-outline">Request Technical Support</a>
+                        <a href="index.html#download" class="btn btn-secondary">Download User Manual</a>
+                    </div>
+                </div>
+                <div class="cta-image">
+                    <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_swnrn2oy.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-particles" id="footerParticles">
+            <!-- Particles will be dynamically created by JS -->
+        </div>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="footer-logo">
+                        <img src="assets/logo.png" alt="Energenius Logo">
+                        <span>Energenius</span>
+                    </a>
+                    <p>Smart energy management solutions for a sustainable future. Save energy, reduce costs, and help the environment.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#download">Download</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="support-center.html">Support Center</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="#">Documentation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter to receive updates and energy-saving tips.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Energenius. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <div class="icon-container">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+        </div>
+    </button>
+
+    <!-- Add CSS for fallback wave animation in case GSAP fails -->
+    <style>
+        .wave-fallback-animation {
+            animation: wave-animation 4s ease-in-out infinite;
+        }
+        
+        @keyframes wave-animation {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        .fallback-animation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 300px;
+            color: white;
+        }
+    </style>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/footer-effects.js"></script>
+    <script src="js/support-center.js"></script>
+</body>
+</html> 

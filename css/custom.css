@@ -79,7 +79,7 @@
   background: linear-gradient(to bottom, #ff9500, #ffcc00) !important;
   border-radius: 2px !important;
   opacity: 0 !important;
-  z-index: 5 !important;
+  z-index: 18 !important;
   animation: lightning-flash 0.5s ease-out forwards !important;
 }
 
@@ -118,4 +118,112 @@
     transform: scale(1.2) rotate(-15deg);
     color: #ff9500;
   }
+}
+
+/* Hero Dashboard SVG Enhancement */
+.hero-image {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+  animation: none !important;
+  visibility: visible !important;
+  display: block !important;
+  width: 100% !important;
+  max-width: 600px !important;
+  margin-left: auto !important;
+  z-index: 200 !important;
+  position: relative !important;
+  perspective: 1200px !important;
+}
+
+.hero-image .floating-element {
+  animation: none !important;
+  transform: none !important;
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  position: relative !important;
+  z-index: 51 !important;
+  transform-style: preserve-3d !important;
+  transform: translateZ(0) rotateX(5deg) !important;
+  transition: transform 0.5s ease !important;
+}
+
+.hero-image .image-container {
+  width: 100% !important;
+  height: auto !important;
+  overflow: visible !important;
+  display: block !important;
+  position: relative !important;
+  z-index: 52 !important;
+}
+
+.hero-image .image-container svg {
+  max-width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  border-radius: 12px !important;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
+  transition: transform 0.5s ease, box-shadow 0.5s ease !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  z-index: 250 !important;
+  shape-rendering: geometricPrecision !important; /* Improves SVG sharpness */
+  text-rendering: geometricPrecision !important;
+  image-rendering: optimizeQuality !important;
+  transform: translateZ(0) !important; /* Force hardware acceleration */
+  backface-visibility: hidden !important;
+  filter: drop-shadow(0 10px 15px rgba(94, 23, 235, 0.2)) !important;
+  transform: translateZ(0) !important;
+  transition: all 0.5s ease !important;
+  box-shadow: 0 15px 35px rgba(94, 23, 235, 0.2) !important;
+}
+
+.hero-image:hover .floating-element {
+  transform: translateZ(20px) rotateX(0deg) !important;
+}
+
+.hero-image:hover .image-container svg {
+  transform: translateZ(30px) !important;
+  box-shadow: 0 25px 50px rgba(94, 23, 235, 0.3) !important;
+}
+
+/* Make sure the dashboard elements appear above other content */
+.hero-image .dashboard-elements {
+  z-index: 54 !important;
+  position: relative !important;
+}
+
+/* Fix hero background z-index */
+.particles-container, 
+#heroParticles,
+.parallax-wrapper,
+.parallax-element,
+.glow-orb {
+  z-index: 1 !important; /* Ensure these are below the dashboard */
+}
+
+/* Fix Hero Section Layering */
+.hero {
+  position: relative !important;
+  overflow: visible !important;
+}
+
+.hero .container {
+  position: relative !important;
+  z-index: 20 !important; /* Higher than background elements but lower than dashboard */
+}
+
+.hero-content {
+  position: relative !important;
+  z-index: 25 !important;
+}
+
+/* Ensure SVG is crisp and sharp */
+.hero-image .image-container svg {
+  filter: none !important; /* Remove any blur filters */
+  -webkit-filter: none !important;
+  image-rendering: -webkit-optimize-contrast !important;
+  image-rendering: crisp-edges !important;
+  transform: translateZ(0) !important; /* Force GPU rendering */
 } 

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Gallery | Energenius</title>
     <meta name="description" content="Explore our gallery of energy management projects, smart home setups, and sustainable energy solutions.">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/gallery-modern.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="assets/favicon.png">
@@ -30,19 +30,39 @@
                     </a>
                 </div>
                 <div class="nav-links" id="navLinks">
-                    <i class="fas fa-times close-menu" id="closeMenu"></i>
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="index.html#features">Features</a></li>
-                        <li><a href="about.html">About</a></li>
+                        <li class="has-dropdown">
+                            <a href="about.html">About <i class="fas fa-chevron-down nav-arrow"></i></a>
+                            <div class="nav-dropdown">
+                                <a href="about.html#mission">Our Mission</a>
+                                <a href="about.html#team">Our Team</a>
+                                <a href="about.html#story">Our Story</a>
+                                <a href="about.html#values">Our Values</a>
+                            </div>
+                        </li>
                         <li><a href="index.html#download">Download</a></li>
                         <li><a href="gallery.html" class="active">Gallery</a></li>
                         <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
                     </ul>
                 </div>
-                <i class="fas fa-bars open-menu" id="openMenu"></i>
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+                    <button class="open-menu" id="openMenu" aria-label="Open menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
             </nav>
+            <div class="scroll-progress"></div>
         </div>
+        <button class="close-menu" id="closeMenu" aria-label="Close menu">
+            <i class="fas fa-times"></i>
+        </button>
     </header>
     
     <section class="page-header">
@@ -72,6 +92,17 @@
                 <span class="section-label" data-aos="fade-up">Our Gallery</span>
                 <h2 data-aos="fade-up" data-aos-delay="100">Explore Our Projects and Solutions</h2>
                 <p data-aos="fade-up" data-aos-delay="200">Discover how our energy management system has helped homes and businesses save energy and reduce costs.</p>
+            </div>
+            
+            <!-- Search bar -->
+            <div class="gallery-search-container" data-aos="fade-up" data-aos-delay="200">
+                <div class="gallery-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="gallerySearch" placeholder="Search gallery items...">
+                    <button class="search-clear" id="clearSearch">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
             </div>
             
             <!-- Layout toggle buttons -->
@@ -142,11 +173,15 @@
                     <p id="lightboxDescription"></p>
                 </div>
                 <span class="lightbox-category" id="lightboxCategory"></span>
+                <div class="lightbox-tags" id="lightboxTags"></div>
             </div>
         </div>
     </div>
     
     <footer class="footer">
+        <div class="footer-particles" id="footerParticles">
+            <!-- Particles will be dynamically created by JS -->
+        </div>
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-about">
@@ -181,7 +216,7 @@
                         <li><a href="faq.html">FAQ</a></li>
                         <li><a href="privacy-policy.html">Privacy Policy</a></li>
                         <li><a href="terms-of-service.html">Terms of Service</a></li>
-                        <li><a href="#">Help Center</a></li>
+                        <li><a href="support-center.html">Support Center</a></li>
                         <li><a href="#">Documentation</a></li>
                     </ul>
                 </div>
@@ -197,7 +232,7 @@
             </div>
             
             <div class="footer-bottom">
-                <p>© 2023 Energenius. All rights reserved.</p>
+                <p>&copy; 2024 Energenius. All rights reserved.</p>
                 <div class="footer-bottom-links">
                     <a href="privacy-policy.html">Privacy Policy</a>
                     <a href="terms-of-service.html">Terms of Service</a>
@@ -206,448 +241,14 @@
         </div>
     </footer>
     
-    <a href="#home" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
-    <button class="theme-toggle" id="themeToggle" style="z-index: 10000; background: #5e17eb; width: 60px; height: 60px; border: 3px solid white; right: 20px; bottom: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
-        <div class="icon-container">
-            <i class="fas fa-moon" style="font-size: 24px;"></i>
-            <i class="fas fa-sun" style="font-size: 24px;"></i>
-        </div>
-    </button>
+    <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
     
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
     <script src="js/main.js"></script>
-    <script type="module">
-        import imageLoader from './js/image-loader.js';
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize AOS
-            AOS.init({
-                duration: 800,
-                easing: 'ease-in-out',
-                once: true,
-                mirror: false
-            });
-            
-            // Apply lazy loading
-            imageLoader.applyLazyLoading();
-            
-            // Gallery data
-            const galleryData = [
-                {
-                    id: 1,
-                    title: 'Smart Home Dashboard',
-                    description: 'Real-time energy monitoring dashboard for residential use',
-                    image: 'assets/images/hero/hero-dashboard.svg',
-                    category: 'residential'
-                },
-                {
-                    id: 2,
-                    title: 'Office Energy Management',
-                    description: 'Comprehensive energy management system for modern offices',
-                    image: 'assets/images/hero/hero-dashboard.svg',
-                    category: 'commercial'
-                },
-                {
-                    id: 3,
-                    title: 'Factory Optimization',
-                    description: 'AI-powered energy optimization for manufacturing plants',
-                    image: 'assets/images/hero/hero-dashboard.svg',
-                    category: 'industrial'
-                },
-                {
-                    id: 4,
-                    title: 'Home Solar Integration',
-                    description: 'Smart integration of solar panels with home energy systems',
-                    image: 'assets/images/hero/hero-dashboard.svg',
-                    category: 'solar'
-                },
-                {
-                    id: 5,
-                    title: 'Apartment Complex Solution',
-                    description: 'Multi-unit energy monitoring and management',
-                    image: 'assets/images/hero/hero-dashboard.svg',
-                    category: 'residential'
-                },
-                {
-                    id: 6,
-                    title: 'Commercial Solar Array',
-                    description: 'Large-scale solar energy management for commercial use',
-                    image: 'assets/images/hero/hero-dashboard.svg',
-                    category: 'solar'
-                }
-            ];
-            
-            const galleryContainer = document.getElementById('galleryContainer');
-            const galleryEmpty = document.getElementById('galleryEmpty');
-            const galleryLoading = document.getElementById('galleryLoading');
-            const filters = document.querySelectorAll('.gallery-filter');
-            const lightbox = document.getElementById('galleryLightbox');
-            const lightboxImage = document.getElementById('lightboxImage');
-            const lightboxClose = document.getElementById('lightboxClose');
-            const lightboxPrev = document.getElementById('lightboxPrev');
-            const lightboxNext = document.getElementById('lightboxNext');
-            const lightboxTitle = document.getElementById('lightboxTitle');
-            const lightboxDescription = document.getElementById('lightboxDescription');
-            const lightboxCategory = document.getElementById('lightboxCategory');
-            const lightboxProgress = document.getElementById('lightboxProgress');
-            const layoutButtons = document.querySelectorAll('.layout-btn');
-            
-            let currentFilter = 'all';
-            let currentImageIndex = 0;
-            let currentLayout = 'grid';
-            
-            // Initialize 3D tilt effect
-            function initTiltEffect() {
-                VanillaTilt.init(document.querySelectorAll('.gallery-item'), {
-                    max: 10,
-                    speed: 400,
-                    glare: true,
-                    'max-glare': 0.3,
-                    scale: 1.02
-                });
-                
-                VanillaTilt.init(document.querySelectorAll('.tilt-element'), {
-                    max: 5,
-                    speed: 400
-                });
-            }
-            
-            // Generate gallery items
-            function generateGalleryItems(filterCategory = 'all') {
-                // Show loading spinner
-                galleryLoading.style.display = 'flex';
-                galleryContainer.style.opacity = '0';
-                galleryEmpty.style.display = 'none';
-                
-                // Simulate loading delay for effect
-                setTimeout(() => {
-                    galleryContainer.innerHTML = '';
-                    
-                    const filteredData = filterCategory === 'all' 
-                        ? galleryData 
-                        : galleryData.filter(item => item.category === filterCategory);
-                    
-                    // Show empty state if no items match filter
-                    if (filteredData.length === 0) {
-                        galleryEmpty.style.display = 'block';
-                        galleryContainer.style.display = 'none';
-                        galleryLoading.style.display = 'none';
-                    } else {
-                        galleryEmpty.style.display = 'none';
-                        galleryContainer.style.display = 'grid';
-                        
-                        // Apply current layout class
-                        galleryContainer.className = 'gallery-container';
-                        if (currentLayout === 'masonry') {
-                            galleryContainer.classList.add('masonry');
-                        }
-                        
-                        filteredData.forEach(item => {
-                            const galleryItem = document.createElement('div');
-                            galleryItem.className = 'gallery-item';
-                            galleryItem.setAttribute('data-category', item.category);
-                            galleryItem.setAttribute('data-id', item.id);
-                            
-                            galleryItem.innerHTML = `
-                                <div class="gallery-image-container zoom-effect">
-                                    <img data-src="${item.image}" alt="${item.title}" class="img-fluid">
-                                </div>
-                                <div class="gallery-overlay">
-                                    <h3>${item.title}</h3>
-                                    <p>${item.description}</p>
-                                </div>
-                                <div class="gallery-actions">
-                                    <div class="gallery-action-btn view-image" data-id="${item.id}">
-                                        <i class="fas fa-search-plus"></i>
-                                    </div>
-                                </div>
-                            `;
-                            
-                            galleryContainer.appendChild(galleryItem);
-                        });
-                        
-                        // Apply lazy loading to new images
-                        imageLoader.applyLazyLoading();
-                        
-                        // Attach event listeners to view buttons
-                        document.querySelectorAll('.view-image').forEach(btn => {
-                            btn.addEventListener('click', openLightbox);
-                        });
-                        
-                        // Attach click event to gallery items
-                        document.querySelectorAll('.gallery-item').forEach(item => {
-                            item.addEventListener('click', function(e) {
-                                // Only open lightbox if not clicking on action buttons
-                                if (!e.target.closest('.gallery-action-btn')) {
-                                    const itemId = parseInt(this.getAttribute('data-id'));
-                                    openLightboxById(itemId);
-                                }
-                            });
-                        });
-                        
-                        // Initialize 3D tilt effect
-                        initTiltEffect();
-                        
-                        // Show gallery with animation
-                        setTimeout(() => {
-                            galleryContainer.style.opacity = '1';
-                            galleryLoading.style.display = 'none';
-                        }, 300);
-                    }
-                }, 600); // Simulated loading time
-            }
-            
-            // Initialize gallery
-            generateGalleryItems();
-            
-            // Filter handling with animation
-            filters.forEach(filter => {
-                filter.addEventListener('click', function(event) {
-                    // Add ripple effect
-                    const ripple = document.createElement('span');
-                    ripple.classList.add('ripple-effect');
-                    this.appendChild(ripple);
-                    
-                    // Calculate ripple position
-                    const rect = this.getBoundingClientRect();
-                    const size = Math.max(rect.width, rect.height);
-                    const x = event.clientX - rect.left - size / 2;
-                    const y = event.clientY - rect.top - size / 2;
-                    
-                    ripple.style.width = ripple.style.height = `${size}px`;
-                    ripple.style.left = `${x}px`;
-                    ripple.style.top = `${y}px`;
-                    
-                    // Remove ripple after animation completes
-                    setTimeout(() => {
-                        ripple.remove();
-                    }, 600);
-                    
-                    // Update active filter
-                    filters.forEach(f => f.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    // Update current filter
-                    currentFilter = this.getAttribute('data-filter');
-                    
-                    // Regenerate gallery items
-                    generateGalleryItems(currentFilter);
-                    
-                    // Update progress bar in lightbox if it's open
-                    if (lightbox.classList.contains('active')) {
-                        updateLightboxProgress();
-                    }
-                });
-            });
-            
-            // Layout toggle handling
-            layoutButtons.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    // Update active state
-                    layoutButtons.forEach(b => b.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    // Update current layout
-                    currentLayout = this.getAttribute('data-layout');
-                    
-                    // Apply layout
-                    if (currentLayout === 'masonry') {
-                        galleryContainer.classList.add('masonry');
-                    } else {
-                        galleryContainer.classList.remove('masonry');
-                    }
-                });
-            });
-            
-            // Lightbox functionality
-            function openLightbox(e) {
-                e.stopPropagation();
-                const itemId = parseInt(this.getAttribute('data-id'));
-                openLightboxById(itemId);
-            }
-            
-            function openLightboxById(itemId) {
-                const imageData = galleryData.find(item => item.id === itemId);
-                
-                if (!imageData) return;
-                
-                // Set current image index
-                currentImageIndex = galleryData.indexOf(imageData);
-                
-                // Update lightbox image and info
-                updateLightboxContent(imageData);
-                
-                // Show lightbox
-                lightbox.classList.add('active');
-                
-                // Update progress bar
-                updateLightboxProgress();
-                
-                // Prevent scrolling
-                document.body.style.overflow = 'hidden';
-            }
-            
-            function updateLightboxContent(imageData) {
-                // Update image
-                lightboxImage.src = imageData.image;
-                lightboxImage.alt = imageData.title;
-                
-                // Update info
-                lightboxTitle.textContent = imageData.title;
-                lightboxDescription.textContent = imageData.description;
-                lightboxCategory.textContent = imageData.category;
-            }
-            
-            function updateLightboxProgress() {
-                // Get filtered gallery data based on current filter
-                const filteredData = currentFilter === 'all' 
-                    ? galleryData 
-                    : galleryData.filter(item => item.category === currentFilter);
-                
-                // Find current image in filtered data
-                const currentImageData = galleryData[currentImageIndex];
-                const filteredIndex = filteredData.findIndex(item => item.id === currentImageData.id);
-                
-                // Calculate progress percentage
-                const progress = ((filteredIndex + 1) / filteredData.length) * 100;
-                lightboxProgress.style.width = `${progress}%`;
-            }
-            
-            function closeLightbox() {
-                lightbox.classList.remove('active');
-                document.body.style.overflow = '';
-            }
-            
-            function navigateLightbox(direction) {
-                // Get filtered gallery data based on current filter
-                const filteredData = currentFilter === 'all' 
-                    ? galleryData 
-                    : galleryData.filter(item => item.category === currentFilter);
-                
-                // Find current image in filtered data
-                const currentImageData = galleryData[currentImageIndex];
-                const filteredIndex = filteredData.findIndex(item => item.id === currentImageData.id);
-                
-                // Calculate new index within filtered data
-                let newFilteredIndex = filteredIndex + direction;
-                
-                // Handle wrap-around
-                if (newFilteredIndex < 0) newFilteredIndex = filteredData.length - 1;
-                if (newFilteredIndex >= filteredData.length) newFilteredIndex = 0;
-                
-                // Get the new image data and its index in the full gallery data
-                const newImageData = filteredData[newFilteredIndex];
-                const newFullIndex = galleryData.findIndex(item => item.id === newImageData.id);
-                
-                // Update current index
-                currentImageIndex = newFullIndex;
-                
-                // Update image with animation
-                lightboxImage.style.opacity = '0';
-                lightboxImage.style.transform = 'scale(0.9) rotateY(' + (direction > 0 ? '5deg' : '-5deg') + ')';
-                
-                setTimeout(() => {
-                    // Update lightbox content
-                    updateLightboxContent(newImageData);
-                    
-                    // Update progress bar
-                    updateLightboxProgress();
-                    
-                    // Fade in the new image
-                    setTimeout(() => {
-                        lightboxImage.style.opacity = '1';
-                        lightboxImage.style.transform = 'scale(1) rotateY(0)';
-                    }, 100);
-                }, 300);
-            }
-            
-            // Attach lightbox event listeners
-            lightboxClose.addEventListener('click', closeLightbox);
-            lightboxPrev.addEventListener('click', () => navigateLightbox(-1));
-            lightboxNext.addEventListener('click', () => navigateLightbox(1));
-            
-            // Close lightbox when clicking outside the image
-            lightbox.addEventListener('click', function(e) {
-                if (e.target === lightbox) {
-                    closeLightbox();
-                }
-            });
-            
-            // Keyboard navigation for lightbox
-            document.addEventListener('keydown', function(e) {
-                if (!lightbox.classList.contains('active')) return;
-                
-                switch (e.key) {
-                    case 'Escape':
-                        closeLightbox();
-                        break;
-                    case 'ArrowLeft':
-                        navigateLightbox(-1);
-                        break;
-                    case 'ArrowRight':
-                        navigateLightbox(1);
-                        break;
-                }
-            });
-            
-            // Touch swipe support for lightbox
-            let touchStartX = 0;
-            let touchEndX = 0;
-            
-            lightbox.addEventListener('touchstart', function(e) {
-                touchStartX = e.changedTouches[0].screenX;
-            }, false);
-            
-            lightbox.addEventListener('touchend', function(e) {
-                touchEndX = e.changedTouches[0].screenX;
-                handleSwipe();
-            }, false);
-            
-            function handleSwipe() {
-                if (touchEndX < touchStartX - 50) {
-                    // Swipe left, go to next
-                    navigateLightbox(1);
-                }
-                if (touchEndX > touchStartX + 50) {
-                    // Swipe right, go to previous
-                    navigateLightbox(-1);
-                }
-            }
-            
-            // Mouse move parallax effect for gallery items
-            document.addEventListener('mousemove', function(e) {
-                const galleryItems = document.querySelectorAll('.gallery-item');
-                const mouseX = e.clientX;
-                const mouseY = e.clientY;
-                
-                galleryItems.forEach(item => {
-                    const rect = item.getBoundingClientRect();
-                    const itemX = rect.left + rect.width / 2;
-                    const itemY = rect.top + rect.height / 2;
-                    
-                    // Calculate distance between mouse and item center
-                    const distX = mouseX - itemX;
-                    const distY = mouseY - itemY;
-                    
-                    // Only apply effect if mouse is relatively close to the item
-                    const maxDist = 500;
-                    const distance = Math.sqrt(distX * distX + distY * distY);
-                    
-                    if (distance < maxDist) {
-                        // Calculate movement factor (closer = stronger effect)
-                        const factor = 1 - distance / maxDist;
-                        const moveX = distX * factor * 0.03;
-                        const moveY = distY * factor * 0.03;
-                        
-                        // Apply subtle transform
-                        item.style.transform = `translateY(-5px) rotateX(${-moveY}deg) rotateY(${moveX}deg)`;
-                    } else {
-                        item.style.transform = '';
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="js/image-loader.js" type="module"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/footer-effects.js"></script>
+    <script src="js/gallery-modern.js"></script>
 </body>
 </html> 
